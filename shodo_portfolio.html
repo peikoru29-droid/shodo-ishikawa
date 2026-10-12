@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>書家 師範代 墨芸工房 | 一生ものの命名書・オリジナル筆文字受託制作</title>
+    <!-- Google Fonts & FontAwesome -->
+    <script type="text/javascript" nonce="42b168cb22a349829cc2e5d9b11" src="//local.adguard.org?ts=1791811981388&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgxiYXJkX3N0b3JhZ2USUBINcmVzcG9uc2VfZGF0YRo_CjAzYzExNzJiNjY5ZmQ1ODAxMDAwNjVkYTRmODgyMGI5OTAxYWY5MTYyMmMzOGI3NTcSCxIHEP7ot7LkGxgB%26filename%3Dshodo_portfolio.html%26opi%3D103135050&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=1&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="42b168cb22a349829cc2e5d9b11" src="//local.adguard.org?ts=1791811981388&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --bg-subtle: #252525;
+            --border-color: #333333;
+            --border-gold: #c5a059;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --accent-gold: #c5a059;
+            --accent-gold-hover: #d4af37;
+            --accent-vermilion: #c0392b; /* 朱肉色 */
+            --font-serif: 'Shippori Mincho', 'Zen Old Mincho', "Yu Mincho", serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .serif {
+            font-family: var(--font-serif);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: rgba(18, 18, 18, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 18px 0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-mark {
+            width: 36px;
+            height: 36px;
+            background-color: var(--accent-vermilion);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-serif);
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(192, 57, 43, 0.4);
+        }
+
+        .logo-text {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-item {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: color 0.2s;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            color: var(--accent-gold);
+            background-color: rgba(197, 160, 89, 0.1);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #c5a059 0%, #9a7b38 100%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.2);
+        }
+
+        .btn-gold:hover {
+            opacity: 0.95;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(197, 160, 89, 0.3);
+        }
+
+        /* 画面セクション切り替え (SPA) */
+        .page-section {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ヒーローセクション */
+        .hero {
+            padding: 90px 0 70px;
+            text-align: center;
+            background: radial-gradient(circle at 50% 30%, rgba(197, 160, 89, 0.12) 0%, transparent 70%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--border-gold);
+            color: var(--accent-gold);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            margin-bottom: 28px;
+            background-color: rgba(197, 160, 89, 0.05);
+            letter-spacing: 0.08em;
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.35;
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+            background: linear-gradient(180deg, #ffffff 0%, #dcdcdc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 720px;
+            margin: 0 auto 40px;
+            font-weight: 300;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 50px;
+        }
+
+        /* 実績数・カウンター */
+        .metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 28px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .metric-card {
+            text-align: center;
+        }
+
+        .metric-number {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        /* セクション共通 */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 60px;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ギャラリー＆タブ */
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 36px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            background-color: rgba(197, 160, 89, 0.08);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .gallery-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-gold);
+        }
+
+        /* 和紙風ダミー画像プレースホルダー */
+        .sample-image-placeholder {
+            width: 100%;
+            height: 240px;
+            background: #fbf9f5;
+            background-image: radial-gradient(#e0dcd3 1px, transparent 0);
+            background-size: 16px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+            color: #2b2b2b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .kanji-demo {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #111;
+            letter-spacing: 0.15em;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.05);
+            margin-bottom: 8px;
+        }
+
+        .stamp-demo {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--accent-vermilion);
+            color: var(--accent-vermilion);
+            font-family: var(--font-serif);
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transform: rotate(-5deg);
+        }
+
+        .gallery-content {
+            padding: 20px;
+        }
+
+        .gallery-tag {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            border: 1px solid rgba(197, 160, 89, 0.4);
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .gallery-title {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .gallery-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* 30秒自動診断ツール */
+        .diagnostic-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-gold);
+            border-radius: 12px;
+            padding: 36px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .diag-step {
+            margin-bottom: 28px;
+        }
+
+        .diag-label {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .diag-label-num {
+            background-color: var(--accent-gold);
+            color: #111;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .radio-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+        }
+
+        .option-box {
+            background-color: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            padding: 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .option-box:hover {
+            border-color: var(--border-gold);
+        }
+
+        .option-box.selected {
+            border-color: var(--accent-gold);
+            background-color: rgba(197, 160, 89, 0.15);
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        .diag-result-box {
+            background-color: var(--bg-subtle);
+            border: 1px dashed var(--border-gold);
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .result-price {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* 4つの安心保証 */
+        .guarantee-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .guarantee-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 28px;
+            position: relative;
+        }
+
+        .guarantee-icon {
+            font-size: 1.8rem;
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+        }
+
+        .guarantee-title {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .guarantee-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        /* 制作の流れ */
+        .flow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .flow-step-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 20px 24px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .flow-num {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            font-weight: bold;
+            min-width: 40px;
+        }
+
+        .flow-text h4 {
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .flow-text p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* お問い合わせフォーム */
+        .form-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 36px;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            background-color: var(--bg-dark);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 12px 16px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.1rem; }
+            .metrics-bar, .guarantee-grid { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo" onclick="switchSection('home')">
+                <div class="logo-mark">墨</div>
+                <div class="logo-text">書家 師範代 墨芸工房</div>
+            </a>
+            <div class="nav-links">
+                <span class="nav-item active" onclick="switchSection('home')">ホーム</span>
+                <span class="nav-item" onclick="switchSection('gallery')">作品ギャラリー</span>
+                <span class="nav-item" onclick="switchSection('diagnostic')">30秒自動見積り</span>
+                <span class="nav-item" onclick="switchSection('guarantee')">安心保証・工程</span>
+                <span class="nav-item" onclick="switchSection('contact')">ご相談・ご依頼</span>
+            </div>
+            <button class="btn-gold" onclick="switchSection('contact')">
+                <i class="fa-regular fa-envelope"></i> 制作のご相談
+            </button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ領域 -->
+    <main class="container">
+
+        <!-- ================= HOME SECTION ================= -->
+        <section id="home" class="page-section active">
+            <div class="hero">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-stamp"></i> 文部科学省後援 書道検定 最高段位 師範代 揮毫
+                </div>
+                <h1 class="serif">命を宿す一筆。<br>一生ものの「命名書」と「筆文字作品」</h1>
+                <p>お子様の誕生を祝う格式高き命名書から、インテリア書、店舗ロゴまで。<br>師範代の確かな腕と厳選した本物素材（越前和紙・最高級墨）で一点ずつ心を込めて揮毫します。</p>
+                
+                <div class="hero-cta">
+                    <button class="btn-gold" style="padding: 14px 28px; font-size: 1rem;" onclick="switchSection('diagnostic')">
+                        <i class="fa-solid fa-calculator"></i> 30秒でお見積り・書風診断
+                    </button>
+                    <button class="btn-gold" style="background: transparent; border: 1px solid var(--border-gold); color: var(--accent-gold);" onclick="switchSection('gallery')">
+                        作品例を見る
+                    </button>
+                </div>
+
+                <!-- メトリクス -->
+                <div class="metrics-bar">
+                    <div class="metric-card">
+                        <div class="metric-number">100 %</div>
+                        <div class="metric-label">事前後書チェック（誤字ゼロ保証）</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">師範代</div>
+                        <div class="metric-label">最高位書道格付・確かな技術の裏付け</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-number">最短3日</div>
+                        <div class="metric-label">お急ぎの命名書・退院日にあわせた発送対応</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title">選ばれる3つの特長</h2>
+                <p class="section-subtitle">既製品にはない、手書き本物ならではの躍動感と温もりをお届けします</p>
+            </div>
+
+            <div class="guarantee-grid" style="margin-bottom: 60px;">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-scroll"></i></div>
+                    <h3 class="guarantee-title">1. 最高級越前和紙と職人手磨り墨</h3>
+                    <p class="guarantee-desc">100年先まで色あせない伝統の越前本和紙と、深みのある漆黒を生み出す職人謹製の古墨を使用。本物だけが持つ存在感を放ちます。</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3 class="guarantee-title">2. 草案2案提示＆無料修正対応</h3>
+                    <p class="guarantee-desc">「届いてみたらイメージと違った」を防ぐため、清書前に2パターンの筆文字草案を写真で共有。ご納得いただいてから仕上げます。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALLERY SECTION ================= -->
+        <section id="gallery" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">作品ギャラリー</h2>
+                <p class="section-subtitle">命名書・インテリア書・ロゴ制作など、多様な書風に対応いたします</p>
+            </div>
+
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="filterGallery('all')">すべて表示</button>
+                <button class="tab-btn" onclick="filterGallery('meimei')">命名書</button>
+                <button class="tab-btn" onclick="filterGallery('interior')">インテリア書</button>
+                <button class="tab-btn" onclick="filterGallery('logo')">店舗・企業ロゴ</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- 命名書1 -->
+                <div class="gallery-card" data-category="meimei">
+                    <div class="sample-image-placeholder">
+                        <div class="kanji-demo">悠真</div>
+                        <div style="font-size: 0.8rem; color: #555;">令和六年十月十二日生</div>
+                        <div class="stamp-demo">墨韻</div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="gallery-tag">命名書 / 伝統額装</span>
+                        <h3 class="gallery-title">命名額「悠真（ゆうま）」</h3>
+                        <p class="gallery-desc">悠々とスケールの大きな人生を歩んでほしいとの願いを込め、正統派の凛とした楷書・行書で揮毫。高級吉野杉額装仕上げ。</p>
+                    </div>
+                </div>
+
+                <!-- 命名書2 -->
+                <div class="gallery-card" data-category="meimei">
+                    <div class="sample-image-placeholder" style="background: #111; color: #fff;">
+                        <div class="kanji-demo" style="color: #c5a059;">凛花</div>
+                        <div style="font-size: 0.8rem; color: #aaa;">モダン金文字仕上げ</div>
+                        <div class="stamp-demo" style="border-color: #c5a059; color: #c5a059;">墨韻</div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="gallery-tag">命名書 / モダンアクリル</span>
+                        <h3 class="gallery-title">モダン金泥命名書「凛花」</h3>
+                        <p class="gallery-desc">現代の洋室インテリアにも調和する、金泥泥墨による優美な一筆。透明アクリルフレーム付き。</p>
+                    </div>
+                </div>
+
+                <!-- インテリア書 -->
+                <div class="gallery-card" data-category="interior">
+                    <div class="sample-image-placeholder">
+                        <div class="kanji-demo">飛翔</div>
+                        <div class="stamp-demo">墨韻</div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="gallery-tag">インテリア書</span>
+                        <h3 class="gallery-title">座右の銘「飛翔」</h3>
+                        <p class="gallery-desc">新築祝い・開業祝いに人気の力強い掠れ（かすれ）を活かした草書作品。空間に静かな躍動感を与えます。</p>
+                    </div>
+                </div>
+
+                <!-- 店舗ロゴ -->
+                <div class="gallery-card" data-category="logo">
+                    <div class="sample-image-placeholder" style="background: #1a1815;">
+                        <div class="kanji-demo" style="color: #f5f5f7; font-size: 2.8rem;">割烹 匠</div>
+                        <div class="stamp-demo">墨韻</div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="gallery-tag">店舗・企業ロゴ</span>
+                        <h3 class="gallery-title">和食店 看板筆文字ロゴ</h3>
+                        <p class="gallery-desc">店舗の暖簾・看板・ショップカード用の商用ライセンス付き筆文字。AIデータ（ベクター）納品にも対応。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DIAGNOSTIC SECTION ================= -->
+        <section id="diagnostic" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">30秒 自動お見積り・書風診断</h2>
+                <p class="section-subtitle">ご希望の条件を選ぶだけで、その場で概算費用と納期をご確認いただけます</p>
+            </div>
+
+            <div class="diagnostic-card">
+                <!-- STEP 1 -->
+                <div class="diag-step">
+                    <div class="diag-label"><span class="diag-label-num">1</span> ご用途をお選びください</div>
+                    <div class="radio-options">
+                        <div class="option-box selected" onclick="selectDiag(this, 'type', 12000)">命名書（お祝い）</div>
+                        <div class="option-box" onclick="selectDiag(this, 'type', 15000)">インテリア書・座右の銘</div>
+                        <div class="option-box" onclick="selectDiag(this, 'type', 30000)">店舗・企業ロゴ（商用可）</div>
+                    </div>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="diag-step">
+                    <div class="diag-label"><span class="diag-label-num">2</span> 書風のイメージをお選びください</div>
+                    <div class="radio-options">
+                        <div class="option-box selected" onclick="selectDiag(this, 'style', 0)">伝統的・正統派（楷書/行書）</div>
+                        <div class="option-box" onclick="selectDiag(this, 'style', 2000)">力強い・ダイナミック</div>
+                        <div class="option-box" onclick="selectDiag(this, 'style', 2000)">優美・流麗・モダン</div>
+                    </div>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="diag-step">
+                    <div class="diag-label"><span class="diag-label-num">3</span> 仕上げ・額装オプション</div>
+                    <div class="radio-options">
+                        <div class="option-box selected" onclick="selectDiag(this, 'frame', 3000)">木製高級額装（ナチュラル/ブラウン）</div>
+                        <div class="option-box" onclick="selectDiag(this, 'frame', 5000)">透明アクリルアートフレーム</div>
+                        <div class="option-box" onclick="selectDiag(this, 'frame', 0)">本紙のみ（裏打ち済・額なし）</div>
+                    </div>
+                </div>
+
+                <!-- 試算結果 -->
+                <div class="diag-result-box">
+                    <div style="font-size: 0.9rem; color: var(--text-secondary);">概算制作費用（税・送料込み）</div>
+                    <div class="result-price" id="totalPrice">￥15,000</div>
+                    <div style="font-size: 0.85rem; color: var(--accent-gold);" id="estimatedDelivery">
+                        <i class="fa-regular fa-clock"></i> 目安納期: ご注文決定後 約 5〜7 日でお届け
+                    </div>
+                    <button class="btn-gold" style="margin-top: 20px;" onclick="applyDiagToContact()">
+                        この条件で相談してみる
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GUARANTEE & FLOW SECTION ================= -->
+        <section id="guarantee" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">安心のお約束と制作の流れ</h2>
+                <p class="section-subtitle">インターネットでの特注ご依頼も、最後まで安心してご利用いただけます</p>
+            </div>
+
+            <div class="guarantee-grid" style="margin-bottom: 60px;">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 class="guarantee-title">誤字脱字・100%再制作保証</h3>
+                    <p class="guarantee-desc">万が一、お届けした作品に文字誤りや不備があった場合、無償にて即座に再制作・再発送いたします。</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3 class="guarantee-title">特急対応・指定日配送保証</h3>
+                    <p class="guarantee-desc">退院日やお宮参り、開店日にあわせたお急ぎ発送（最短3日）のご相談にも柔軟に対応いたします。</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 30px;">
+                ご依頼からお届けまでの4ステップ
+            </h3>
+
+            <div class="flow-steps">
+                <div class="flow-step-item">
+                    <div class="flow-num">01</div>
+                    <div class="flow-text">
+                        <h4>お問い合わせ・ヒアリング</h4>
+                        <p>下記フォームより、書かせていただくお名前・言葉、イメージ、ご予算をお知らせください。</p>
+                    </div>
+                </div>
+                <div class="flow-step-item">
+                    <div class="flow-num">02</div>
+                    <div class="flow-text">
+                        <h4>草案（サンプル筆文字）のご確認</h4>
+                        <p>師範代が2パターンの筆文字草案を作成し、写真をメールでお送りします。書風をご確認いただけます。</p>
+                    </div>
+                </div>
+                <div class="flow-step-item">
+                    <div class="flow-num">03</div>
+                    <div class="flow-text">
+                        <h4>本清書・裏打ち・額装仕上げ</h4>
+                        <p>選んでいただいた書風にて最高級和紙に清書し、シワを伸ばす「裏打ち」加工を施して額装します。</p>
+                    </div>
+                </div>
+                <div class="flow-step-item">
+                    <div class="flow-num">04</div>
+                    <div class="flow-text">
+                        <h4>厳重梱包にて発送・納品</h4>
+                        <p>作品に傷がつかないよう専用の化粧箱と緩衝材で厳重に梱包し、追跡番号を添えて発送します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">ご相談・制作のご依頼</h2>
+                <p class="section-subtitle">「こんなイメージで書いてほしい」といった漠然とした段階でも気軽にお問い合わせください</p>
+            </div>
+
+            <div class="form-container">
+                <form onsubmit="event.preventDefault(); alert('（デモ画面）お問い合わせを受け付けました。師範代より折り返しご連絡いたします。');">
+                    <div class="form-group">
+                        <label>お名前 <span style="color: var(--accent-vermilion);">*</span></label>
+                        <input type="text" class="form-control" placeholder="例：山田 太郎" required>
+                    </div>
+                    <div class="form-group">
+                        <label>メールアドレス <span style="color: var(--accent-vermilion);">*</span></label>
+                        <input type="email" class="form-control" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>ご用途</label>
+                        <select class="form-control" id="formUsage">
+                            <option>命名書（お祝い）</option>
+                            <option>インテリア書・座右の銘</option>
+                            <option>店舗・企業ロゴ</option>
+                            <option>その他（贈り物等）</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>揮毫するお名前・文字 / ご要望・納期など <span style="color: var(--accent-vermilion);">*</span></label>
+                        <textarea class="form-control" rows="5" id="formDetails" placeholder="例：お子様のお名前「悠真（ゆうま）」、生年月日「2026年10月12日」、力強く温かみのある書風を希望。退院日の10月20日までに届いてほしい。" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold" style="width: 100%; padding: 14px; justify-content: center; font-size: 1rem;">
+                        <i class="fa-regular fa-paper-plane"></i> 師範代へ相談内容を送信する（デモ）
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 書家 師範代 墨芸工房 (BOKUIN). All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // SPA 画面切替
+        function switchSection(sectionId) {
+            document.querySelectorAll('.page-section').forEach(sec => {
+                sec.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+
+            const activeNav = Array.from(document.querySelectorAll('.nav-item')).find(el => el.getAttribute('onclick')?.includes(sectionId));
+            if (activeNav) {
+                activeNav.classList.add('active');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ギャラリーフィルター
+        function filterGallery(category) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.gallery-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 30秒診断計算ロジック
+        let diagValues = {
+            type: 12000,
+            style: 0,
+            frame: 3000
+        };
+
+        function selectDiag(element, category, price) {
+            const parent = element.parentElement;
+            parent.querySelectorAll('.option-box').forEach(box => box.classList.remove('selected'));
+            element.classList.add('selected');
+
+            diagValues[category] = price;
+            updatePrice();
+        }
+
+        function updatePrice() {
+            const total = diagValues.type + diagValues.style + diagValues.frame;
+            document.getElementById('totalPrice').innerText = '￥' + total.toLocaleString();
+        }
+
+        function applyDiagToContact() {
+            switchSection('contact');
+            const details = document.getElementById('formDetails');
+            const totalPrice = document.getElementById('totalPrice').innerText;
+            details.value = `【診断経由の概算条件】\n概算想定費用: ${totalPrice}\nご希望イメージ・納期などをご記入ください：\n`;
+        }
+    </script>
+</body>
+</html>
