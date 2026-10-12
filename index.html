@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>書家 師範代 墨芸工房 | 一生ものの命名書・オリジナル筆文字受託制作</title>
+    <meta name="description" content="文部科学省後援書道検定最高段位・師範代が揮毫する、一生ものの命名書・インテリア書・店舗ロゴ。越前和紙と職人手磨り墨を使用した本物の一筆をお届けします。">
+    
+    <!-- Open Graph Protocol (OGP) -->
+    <meta property="og:title" content="書家 師範代 墨芸工房 | 一生ものの命名書・筆文字受託制作">
+    <meta property="og:description" content="最高級和紙と手磨り墨で仕上げる一点もの筆文字作品。30秒自動見積り実施中。">
+    <meta property="og:type" content="website">
+
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,16 +19,16 @@
     
     <style>
         :root {
-            --bg-dark: #0a0a0a;
-            --bg-card: rgba(22, 22, 24, 0.85);
-            --bg-subtle: rgba(30, 30, 35, 0.9);
+            --bg-dark: #0a0a0c;
+            --bg-card: rgba(20, 20, 24, 0.93);
+            --bg-subtle: rgba(28, 28, 34, 0.95);
             --border-color: rgba(212, 175, 55, 0.25);
             --border-gold: #d4af37;
             --text-primary: #f8f8fa;
             --text-secondary: #b0b0b8;
             --accent-gold: #e2c044;
-            --accent-gold-grad: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa7c11 100%);
-            --accent-vermilion: #d63031;
+            --accent-gold-grad: linear-gradient(135deg, #fff3c4 0%, #d4af37 45%, #aa7c11 100%);
+            --accent-vermilion: #c0392b;
             --font-serif: 'Shippori Mincho', 'Zen Old Mincho', "Yu Mincho", serif;
             --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
@@ -32,9 +39,13 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-dark);
-            background-image: linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.92)), url('http://googleusercontent.com/image_collection/image_retrieval/1473445811517408268_0');
+            background-image: linear-gradient(rgba(10, 10, 12, 0.90), rgba(10, 10, 12, 0.93)), url('http://googleusercontent.com/image_collection/image_retrieval/1473445811517408268_0');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -42,6 +53,7 @@
             font-family: var(--font-sans);
             line-height: 1.8;
             overflow-x: hidden;
+            padding-bottom: 60px; /* モバイル固定バー用余白 */
         }
 
         .serif { font-family: var(--font-serif); }
@@ -50,7 +62,7 @@
             writing-mode: vertical-rl;
             text-orientation: upright;
             font-family: var(--font-serif);
-            letter-spacing: 0.3em;
+            letter-spacing: 0.35em;
         }
 
         .container {
@@ -59,43 +71,47 @@
             padding: 0 24px;
         }
 
+        /* ヘッダー */
         header {
-            background-color: rgba(10, 10, 10, 0.85);
+            background-color: rgba(10, 10, 12, 0.94);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 16px 0;
+            padding: 12px 0;
         }
 
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 14px;
+            gap: 10px;
             text-decoration: none;
             color: var(--text-primary);
+            min-width: 0;
         }
 
         .logo-mark {
-            width: 40px;
-            height: 40px;
-            background-color: var(--accent-vermilion);
+            width: 36px;
+            height: 36px;
+            background: radial-gradient(circle, #d63031 0%, var(--accent-vermilion) 100%);
             color: #fff;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: var(--font-serif);
             font-weight: bold;
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             border-radius: 4px;
-            box-shadow: 0 0 15px rgba(214, 48, 49, 0.5);
+            box-shadow: 0 0 12px rgba(214, 48, 49, 0.6);
+            flex-shrink: 0;
             position: relative;
         }
 
@@ -109,54 +125,60 @@
 
         .logo-text {
             font-family: var(--font-serif);
-            font-size: 1.3rem;
+            font-size: 1.18rem;
             font-weight: 700;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.08em;
             background: var(--accent-gold-grad);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .nav-links {
             display: flex;
-            gap: 22px;
+            gap: 18px;
             align-items: center;
         }
 
         .nav-item {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             cursor: pointer;
             transition: all 0.3s;
-            padding: 6px 14px;
+            padding: 6px 10px;
             border-radius: 4px;
             font-family: var(--font-serif);
             letter-spacing: 0.05em;
+            white-space: nowrap;
         }
 
         .nav-item:hover, .nav-item.active {
             color: var(--accent-gold);
             background-color: rgba(212, 175, 55, 0.12);
-            border-bottom: 2px solid var(--accent-gold);
         }
 
         .btn-gold {
             background: var(--accent-gold-grad);
             color: #111;
-            padding: 10px 24px;
+            padding: 9px 18px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             border: none;
             cursor: pointer;
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            justify-content: center;
+            gap: 6px;
             box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
             font-family: var(--font-serif);
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .btn-gold:hover {
@@ -165,9 +187,49 @@
             filter: brightness(1.08);
         }
 
+        /* モバイルハンバーガー */
+        .hamburger-btn {
+            display: none;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--accent-gold);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 61px;
+            left: 0;
+            right: 0;
+            background-color: rgba(12, 12, 15, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px;
+            flex-direction: column;
+            gap: 14px;
+            z-index: 999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu .nav-item {
+            font-size: 1rem;
+            padding: 10px 14px;
+            border-bottom: 1px dashed rgba(212, 175, 55, 0.15);
+        }
+
+        /* ページセクション */
         .page-section {
             display: none;
-            animation: fadeIn 0.5s ease-in-out;
+            animation: fadeIn 0.4s ease-in-out;
+            scroll-margin-top: 80px;
         }
 
         .page-section.active {
@@ -175,19 +237,20 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* ヒーローセクション */
         .hero {
-            padding: 90px 0 80px;
+            padding: 70px 0;
             position: relative;
-            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.4), rgba(10, 10, 10, 0.85)), url('http://googleusercontent.com/image_collection/image_retrieval/352630824702898435_0');
+            background: linear-gradient(to bottom, rgba(10, 10, 12, 0.4), rgba(10, 10, 12, 0.88)), url('http://googleusercontent.com/image_collection/image_retrieval/352630824702898435_0');
             background-size: cover;
             background-position: center;
             border-radius: 12px;
             border: 1px solid var(--border-color);
-            margin-top: 20px;
+            margin-top: 16px;
             box-shadow: 0 20px 50px rgba(0,0,0,0.6);
             display: flex;
             align-items: center;
@@ -196,82 +259,84 @@
         }
 
         .hero-body {
-            padding: 0 50px;
-            max-width: 780px;
+            padding: 0 40px;
+            max-width: 760px;
             z-index: 2;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             border: 1px solid var(--border-gold);
             color: var(--accent-gold);
-            padding: 6px 20px;
+            padding: 5px 16px;
             border-radius: 30px;
-            font-size: 0.88rem;
-            margin-bottom: 28px;
-            background-color: rgba(10, 10, 10, 0.7);
+            font-size: 0.82rem;
+            margin-bottom: 22px;
+            background-color: rgba(10, 10, 12, 0.75);
             backdrop-filter: blur(8px);
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             font-family: var(--font-serif);
         }
 
         .hero h1 {
             font-family: var(--font-serif);
-            font-size: 3.4rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            line-height: 1.3;
-            margin-bottom: 24px;
-            letter-spacing: 0.08em;
+            line-height: 1.35;
+            margin-bottom: 18px;
+            letter-spacing: 0.06em;
             color: #ffffff;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+            text-shadow: 0 4px 20px rgba(0,0,0,0.9);
         }
 
         .hero-sub {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: var(--text-secondary);
-            margin-bottom: 40px;
+            margin-bottom: 32px;
             font-weight: 400;
-            line-height: 1.9;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            line-height: 1.8;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.9);
         }
 
         .hero-vertical-accent {
-            padding-right: 60px;
+            padding-right: 48px;
             color: rgba(226, 192, 68, 0.85);
-            font-size: 2rem;
+            font-size: 1.7rem;
             line-height: 1.8;
-            height: 280px;
+            height: 250px;
             text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
             user-select: none;
             display: flex;
-            gap: 20px;
+            gap: 16px;
         }
 
         .hero-cta {
             display: flex;
-            gap: 18px;
+            gap: 14px;
             margin-bottom: 10px;
             flex-wrap: wrap;
         }
 
+        /* メトリクス */
         .metrics-bar {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 16px;
             background: var(--bg-card);
             backdrop-filter: blur(12px);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 32px;
-            margin: 40px 0 20px;
+            padding: 24px;
+            margin: 32px 0 20px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
         .metric-card {
             text-align: center;
             border-right: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 0 8px;
         }
 
         .metric-card:last-child {
@@ -280,7 +345,7 @@
 
         .metric-number {
             font-family: var(--font-serif);
-            font-size: 2.4rem;
+            font-size: 2.1rem;
             background: var(--accent-gold-grad);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -288,24 +353,25 @@
         }
 
         .metric-label {
-            font-size: 0.88rem;
+            font-size: 0.82rem;
             color: var(--text-secondary);
-            margin-top: 6px;
+            margin-top: 4px;
             font-family: var(--font-serif);
         }
 
+        /* セクション共通 */
         .section-header {
             text-align: center;
-            margin-bottom: 56px;
-            padding-top: 70px;
+            margin-bottom: 40px;
+            padding-top: 50px;
         }
 
         .section-title {
             font-family: var(--font-serif);
-            font-size: 2.3rem;
+            font-size: 2rem;
             font-weight: 800;
             letter-spacing: 0.08em;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
             position: relative;
             display: inline-block;
         }
@@ -313,23 +379,24 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 60px;
+            width: 46px;
             height: 2px;
             background: var(--accent-gold-grad);
-            margin: 12px auto 0;
+            margin: 10px auto 0;
             border-radius: 2px;
         }
 
         .section-subtitle {
             color: var(--text-secondary);
-            font-size: 0.98rem;
+            font-size: 0.92rem;
         }
 
+        /* ギャラリー＆タブ */
         .tab-buttons {
             display: flex;
             justify-content: center;
-            gap: 14px;
-            margin-bottom: 40px;
+            gap: 10px;
+            margin-bottom: 32px;
             flex-wrap: wrap;
         }
 
@@ -337,12 +404,13 @@
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             color: var(--text-secondary);
-            padding: 10px 24px;
+            padding: 8px 18px;
             border-radius: 30px;
             cursor: pointer;
-            font-size: 0.92rem;
+            font-size: 0.85rem;
             transition: all 0.3s;
             font-family: var(--font-serif);
+            white-space: nowrap;
         }
 
         .tab-btn.active, .tab-btn:hover {
@@ -355,8 +423,8 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 28px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
         }
 
         .gallery-card {
@@ -364,19 +432,19 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             overflow: hidden;
-            transition: all 0.4s;
+            transition: all 0.35s;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .gallery-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-4px);
             border-color: var(--border-gold);
             box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
         }
 
         .gallery-img-wrapper {
             width: 100%;
-            height: 250px;
+            height: 230px;
             position: relative;
             overflow: hidden;
             border-bottom: 1px solid var(--border-color);
@@ -394,39 +462,40 @@
         }
 
         .gallery-content {
-            padding: 24px;
+            padding: 18px;
         }
 
         .gallery-tag {
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: var(--accent-gold);
             border: 1px solid var(--border-color);
-            padding: 3px 10px;
+            padding: 2px 8px;
             border-radius: 4px;
             display: inline-block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             background-color: rgba(212, 175, 55, 0.08);
             font-family: var(--font-serif);
         }
 
         .gallery-title {
             font-family: var(--font-serif);
-            font-size: 1.28rem;
-            margin-bottom: 10px;
+            font-size: 1.15rem;
+            margin-bottom: 6px;
             color: var(--text-primary);
         }
 
         .gallery-desc {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
+        /* 30秒自動診断ツール */
         .diagnostic-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-gold);
             border-radius: 16px;
-            padding: 40px;
+            padding: 32px;
             max-width: 840px;
             margin: 0 auto;
             box-shadow: 0 15px 40px rgba(0,0,0,0.5);
@@ -434,47 +503,49 @@
         }
 
         .diag-step {
-            margin-bottom: 32px;
+            margin-bottom: 26px;
         }
 
         .diag-label {
-            font-size: 1.05rem;
+            font-size: 0.98rem;
             font-weight: 600;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             font-family: var(--font-serif);
         }
 
         .diag-label-num {
             background: var(--accent-gold-grad);
             color: #111;
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             font-weight: bold;
+            flex-shrink: 0;
         }
 
         .radio-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 10px;
         }
 
         .option-box {
             background-color: var(--bg-subtle);
             border: 1px solid var(--border-color);
-            padding: 16px;
+            padding: 12px 10px;
             border-radius: 8px;
             cursor: pointer;
             text-align: center;
             transition: all 0.25s;
-            font-size: 0.92rem;
+            font-size: 0.85rem;
+            font-family: var(--font-serif);
         }
 
         .option-box:hover {
@@ -486,39 +557,134 @@
             background-color: rgba(212, 175, 55, 0.18);
             color: var(--accent-gold);
             font-weight: bold;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
         }
 
         .diag-result-box {
             background-color: var(--bg-subtle);
             border: 1px dashed var(--border-gold);
             border-radius: 12px;
-            padding: 28px;
-            margin-top: 36px;
+            padding: 22px;
+            margin-top: 28px;
             text-align: center;
+            overflow: hidden;
         }
 
         .result-price {
             font-family: var(--font-serif);
-            font-size: 2.5rem;
+            font-size: 2.1rem;
             background: var(--accent-gold-grad);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: bold;
-            margin: 10px 0;
+            margin: 6px 0;
+            word-break: break-all;
+            line-height: 1.2;
         }
 
+        /* お客様の声 & FAQ */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .review-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 22px;
+        }
+
+        .review-stars {
+            color: var(--accent-gold);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .review-title {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .review-text {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .review-author {
+            font-size: 0.78rem;
+            color: var(--accent-gold);
+            margin-top: 10px;
+            text-align: right;
+            font-family: var(--font-serif);
+        }
+
+        .faq-accordion {
+            max-width: 840px;
+            margin: 0 auto 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .faq-question i {
+            color: var(--accent-gold);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 20px 16px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            border-top: 1px dashed rgba(212, 175, 55, 0.15);
+            padding-top: 12px;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* 保証 & 流れ */
         .guarantee-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
+            gap: 20px;
         }
 
         .guarantee-card {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 32px;
+            padding: 24px;
             transition: border-color 0.3s;
         }
 
@@ -527,27 +693,27 @@
         }
 
         .guarantee-icon {
-            font-size: 2rem;
+            font-size: 1.6rem;
             color: var(--accent-gold);
-            margin-bottom: 18px;
+            margin-bottom: 12px;
         }
 
         .guarantee-title {
             font-family: var(--font-serif);
-            font-size: 1.25rem;
-            margin-bottom: 12px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
         }
 
         .guarantee-desc {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         .flow-steps {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 14px;
             max-width: 840px;
             margin: 0 auto;
         }
@@ -555,29 +721,29 @@
         .flow-step-item {
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
-            padding: 24px 28px;
+            padding: 18px 22px;
             border-radius: 10px;
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 18px;
         }
 
         .flow-num {
             font-family: var(--font-serif);
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--accent-gold);
             font-weight: bold;
-            min-width: 48px;
+            min-width: 36px;
         }
 
         .flow-text h4 {
             font-family: var(--font-serif);
-            font-size: 1.1rem;
-            margin-bottom: 6px;
+            font-size: 1rem;
+            margin-bottom: 4px;
         }
 
         .flow-text p {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: var(--text-secondary);
         }
 
@@ -585,21 +751,21 @@
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 44px;
+            padding: 32px;
             max-width: 720px;
             margin: 0 auto;
             box-shadow: 0 15px 40px rgba(0,0,0,0.4);
         }
 
         .form-group {
-            margin-bottom: 24px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             font-family: var(--font-serif);
         }
 
@@ -608,9 +774,9 @@
             background-color: var(--bg-dark);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 14px 18px;
+            padding: 12px 14px;
             color: var(--text-primary);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: border-color 0.3s;
         }
 
@@ -620,49 +786,225 @@
             box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
         }
 
+        /* スマホ限定常時表示ボトムバー */
+        .mobile-floating-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(12, 12, 15, 0.95);
+            backdrop-filter: blur(12px);
+            border-top: 1px solid var(--border-gold);
+            padding: 8px 12px;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.6);
+        }
+
+        .mobile-floating-btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mobile-floating-btns button {
+            flex: 1;
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+
         footer {
             border-top: 1px solid var(--border-color);
-            padding: 40px 0;
+            padding: 32px 0;
             text-align: center;
             color: var(--text-secondary);
-            font-size: 0.88rem;
-            margin-top: 90px;
+            font-size: 0.82rem;
+            margin-top: 70px;
             font-family: var(--font-serif);
         }
 
+        /* モバイル特化レスポンシブ最適化 */
         @media (max-width: 768px) {
-            .hero { flex-direction: column; text-align: center; padding: 60px 20px; }
-            .hero-body { padding: 0; }
-            .hero h1 { font-size: 2.2rem; }
-            .hero-vertical-accent { display: none; }
-            .metrics-bar, .guarantee-grid { grid-template-columns: 1fr; }
-            .nav-links { display: none; }
+            body {
+                padding-bottom: 64px; /* ボトムバー領域確保 */
+            }
+
+            .container {
+                padding: 0 14px;
+            }
+
+            header {
+                padding: 8px 0;
+            }
+
+            .logo-text {
+                font-size: 0.92rem;
+            }
+
+            .logo-mark {
+                width: 30px;
+                height: 30px;
+                font-size: 0.95rem;
+            }
+
+            .nav-links, header .btn-gold {
+                display: none;
+            }
+
+            .hamburger-btn {
+                display: block;
+            }
+
+            .mobile-floating-bar {
+                display: block;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 36px 14px;
+                margin-top: 10px;
+            }
+
+            .hero-body {
+                padding: 0;
+            }
+
+            .hero h1 {
+                font-size: 1.85rem;
+                line-height: 1.35;
+            }
+
+            .hero-sub {
+                font-size: 0.88rem;
+                margin-bottom: 24px;
+            }
+
+            .hero-badge {
+                font-size: 0.72rem;
+                padding: 4px 12px;
+                margin-bottom: 16px;
+            }
+
+            .hero-vertical-accent {
+                display: none;
+            }
+
+            .metrics-bar {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                padding: 16px 14px;
+                margin: 20px 0 10px;
+            }
+
+            .metric-card {
+                border-right: none;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+                padding-bottom: 10px;
+            }
+
+            .metric-card:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .metric-number {
+                font-size: 1.65rem;
+            }
+
+            .section-header {
+                padding-top: 36px;
+                margin-bottom: 26px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .guarantee-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .diagnostic-card {
+                padding: 18px 14px;
+                border-radius: 12px;
+            }
+
+            .radio-options {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .diag-result-box {
+                padding: 14px 10px;
+                margin-top: 20px;
+            }
+
+            .result-price {
+                font-size: 1.6rem;
+            }
+
+            .form-container {
+                padding: 20px 14px;
+                border-radius: 12px;
+            }
+
+            .flow-step-item {
+                padding: 14px;
+                gap: 12px;
+            }
+
+            .flow-num {
+                font-size: 1.2rem;
+                min-width: 28px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- ヘッダー -->
     <header>
         <div class="container nav">
             <a href="#" class="logo" onclick="switchSection('home')">
                 <div class="logo-mark">墨</div>
                 <div class="logo-text">書家 師範代 墨芸工房</div>
             </a>
+
+            <!-- PCナビゲーション -->
             <div class="nav-links">
                 <span class="nav-item active" onclick="switchSection('home')">ホーム</span>
                 <span class="nav-item" onclick="switchSection('gallery')">作品ギャラリー</span>
                 <span class="nav-item" onclick="switchSection('diagnostic')">30秒自動見積り</span>
+                <span class="nav-item" onclick="switchSection('reviews')">実績・Q&A</span>
                 <span class="nav-item" onclick="switchSection('guarantee')">安心保証・工程</span>
                 <span class="nav-item" onclick="switchSection('contact')">ご相談・ご依頼</span>
             </div>
+
             <button class="btn-gold" onclick="switchSection('contact')">
                 <i class="fa-regular fa-envelope"></i> 制作のご相談
             </button>
+
+            <!-- スマホハンバーガーボタン -->
+            <button class="hamburger-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
+            </button>
+        </div>
+
+        <!-- スマホ用スライドメニュー -->
+        <div class="mobile-menu" id="mobileMenu">
+            <span class="nav-item" onclick="switchSection('home'); toggleMobileMenu();">ホーム</span>
+            <span class="nav-item" onclick="switchSection('gallery'); toggleMobileMenu();">作品ギャラリー</span>
+            <span class="nav-item" onclick="switchSection('diagnostic'); toggleMobileMenu();">30秒自動見積り</span>
+            <span class="nav-item" onclick="switchSection('reviews'); toggleMobileMenu();">実績・よくある質問</span>
+            <span class="nav-item" onclick="switchSection('guarantee'); toggleMobileMenu();">安心保証・制作工程</span>
+            <span class="nav-item" onclick="switchSection('contact'); toggleMobileMenu();">ご相談・制作ご依頼</span>
         </div>
     </header>
 
     <main class="container">
 
+        <!-- HOME -->
         <section id="home" class="page-section active">
             <div class="hero">
                 <div class="hero-body">
@@ -673,7 +1015,7 @@
                     <p class="hero-sub">お子様の誕生を祝う格式高き命名書から、インテリア書、店舗ロゴまで。<br>師範代の確かな腕と厳選した本物素材（越前和紙・最高級墨）で一点ずつ心を込めて揮毫します。</p>
                     
                     <div class="hero-cta">
-                        <button class="btn-gold" style="padding: 14px 30px; font-size: 1rem;" onclick="switchSection('diagnostic')">
+                        <button class="btn-gold" style="padding: 12px 24px; font-size: 0.92rem;" onclick="switchSection('diagnostic')">
                             <i class="fa-solid fa-calculator"></i> 30秒でお見積り・書風診断
                         </button>
                         <button class="btn-gold" style="background: transparent; border: 1px solid var(--border-gold); color: var(--accent-gold);" onclick="switchSection('gallery')">
@@ -708,7 +1050,7 @@
                 <p class="section-subtitle">既製品にはない、手書き本物ならではの躍動感と温もりをお届けします</p>
             </div>
 
-            <div class="guarantee-grid" style="margin-bottom: 60px;">
+            <div class="guarantee-grid">
                 <div class="guarantee-card">
                     <div class="guarantee-icon"><i class="fa-solid fa-scroll"></i></div>
                     <h3 class="guarantee-title">1. 最高級越前和紙と職人手磨り墨</h3>
@@ -722,6 +1064,7 @@
             </div>
         </section>
 
+        <!-- GALLERY -->
         <section id="gallery" class="page-section">
             <div class="section-header">
                 <h2 class="section-title">作品ギャラリー</h2>
@@ -771,6 +1114,7 @@
             </div>
         </section>
 
+        <!-- DIAGNOSTIC TOOL -->
         <section id="diagnostic" class="page-section">
             <div class="section-header">
                 <h2 class="section-title">30秒 自動お見積り・書風診断</h2>
@@ -781,50 +1125,117 @@
                 <div class="diag-step">
                     <div class="diag-label"><span class="diag-label-num">1</span> ご用途をお選びください</div>
                     <div class="radio-options">
-                        <div class="option-box selected" onclick="selectDiag(this, 'type', 12000)">命名書（お祝い）</div>
-                        <div class="option-box" onclick="selectDiag(this, 'type', 15000)">インテリア書・座右の銘</div>
-                        <div class="option-box" onclick="selectDiag(this, 'type', 30000)">店舗・企業ロゴ（商用可）</div>
+                        <div class="option-box selected" onclick="selectDiag(this, 'type', 12000, '命名書（お祝い）')">命名書（お祝い）</div>
+                        <div class="option-box" onclick="selectDiag(this, 'type', 15000, 'インテリア書・座右の銘')">インテリア書・座右の銘</div>
+                        <div class="option-box" onclick="selectDiag(this, 'type', 30000, '店舗・企業ロゴ（商用可）')">店舗・企業ロゴ（商用可）</div>
                     </div>
                 </div>
 
                 <div class="diag-step">
                     <div class="diag-label"><span class="diag-label-num">2</span> 書風のイメージをお選びください</div>
                     <div class="radio-options">
-                        <div class="option-box selected" onclick="selectDiag(this, 'style', 0)">伝統的・正統派（楷書/行書）</div>
-                        <div class="option-box" onclick="selectDiag(this, 'style', 2000)">力強い・ダイナミック</div>
-                        <div class="option-box" onclick="selectDiag(this, 'style', 2000)">優美・流麗・モダン</div>
+                        <div class="option-box selected" onclick="selectDiag(this, 'style', 0, '伝統的・正統派（楷書/行書）')">伝統的・正統派（楷書/行書）</div>
+                        <div class="option-box" onclick="selectDiag(this, 'style', 2000, '力強い・ダイナミック')">力強い・ダイナミック</div>
+                        <div class="option-box" onclick="selectDiag(this, 'style', 2000, '優美・流麗・モダン')">優美・流麗・モダン</div>
                     </div>
                 </div>
 
                 <div class="diag-step">
                     <div class="diag-label"><span class="diag-label-num">3</span> 仕上げ・額装オプション</div>
                     <div class="radio-options">
-                        <div class="option-box selected" onclick="selectDiag(this, 'frame', 3000)">木製高級額装（ナチュラル/ブラウン）</div>
-                        <div class="option-box" onclick="selectDiag(this, 'frame', 5000)">透明アクリルアートフレーム</div>
-                        <div class="option-box" onclick="selectDiag(this, 'frame', 0)">本紙のみ（裏打ち済・額なし）</div>
+                        <div class="option-box selected" onclick="selectDiag(this, 'frame', 3000, '木製高級額装（ナチュラル/ブラウン）')">木製高級額装</div>
+                        <div class="option-box" onclick="selectDiag(this, 'frame', 5000, '透明アクリルアートフレーム')">透明アクリルフレーム</div>
+                        <div class="option-box" onclick="selectDiag(this, 'frame', 0, '本紙のみ（裏打ち済・額なし）')">本紙のみ（裏打ち済）</div>
+                    </div>
+                </div>
+
+                <div class="diag-step">
+                    <div class="diag-label"><span class="diag-label-num">4</span> 発送スピード</div>
+                    <div class="radio-options">
+                        <div class="option-box selected" onclick="selectDiag(this, 'express', 0, '通常発送（5〜7日）')">通常発送（約5〜7日）</div>
+                        <div class="option-box" onclick="selectDiag(this, 'express', 3000, '特急仕上げ（最短3日届）')">⚡ 特急仕上げ（最短3日届 +￥3,000）</div>
                     </div>
                 </div>
 
                 <div class="diag-result-box">
-                    <div style="font-size: 0.9rem; color: var(--text-secondary);">概算制作費用（税・送料込み）</div>
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">概算制作費用（税・送料込み）</div>
                     <div class="result-price" id="totalPrice">￥15,000</div>
-                    <div style="font-size: 0.88rem; color: var(--accent-gold);" id="estimatedDelivery">
+                    <div style="font-size: 0.82rem; color: var(--accent-gold);" id="estimatedDelivery">
                         <i class="fa-regular fa-clock"></i> 目安納期: ご注文決定後 約 5〜7 日でお届け
                     </div>
-                    <button class="btn-gold" style="margin-top: 20px;" onclick="applyDiagToContact()">
-                        この条件で相談してみる
+                    <button class="btn-gold" style="margin-top: 18px; width: 100%; padding: 12px; font-size: 0.95rem;" onclick="applyDiagToContact()">
+                        この条件で相談・依頼してみる
                     </button>
                 </div>
             </div>
         </section>
 
+        <!-- REVIEWS & FAQ -->
+        <section id="reviews" class="page-section">
+            <div class="section-header">
+                <h2 class="section-title">揮毫実績とお客様の声</h2>
+                <p class="section-subtitle">全国のお客様から心温まるお声をいただいております</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="review-title">「一生の宝物になりました」</div>
+                    <p class="review-text">長男の誕生に合わせて注文しました。事前にサンプル草案を2案見せていただけたので安心して任せられました。木製額の重厚感も素晴らしく感動です。</p>
+                    <div class="review-author">京都府 K.S様（命名額「悠真」ご依頼）</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <div class="review-title">「退院日に間に合わせてくれました」</div>
+                    <p class="review-text">急な出産だったのですが、特急対応で退院日に間に合わせていただきました。親族へのお披露目でも大好評でした！</p>
+                    <div class="review-author">東京都 M.Y様（金泥命名書ご依頼）</div>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2 class="section-title">よくある質問 (FAQ)</h2>
+                <p class="section-subtitle">ご依頼前によくいただく質問をまとめております</p>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Q. 万が一、誤字や不備があった場合の保証はありますか？</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A. 100%完全再制作保証がございます。当方の揮毫ミスはもちろん、万が一の輸送中の損傷についても無償にて即座に再仕上げ・再発送いたします。
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Q. 急ぎで命名書が必要なのですが、何日で届きますか？</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A. 通常はご注文確定から約5〜7日でお届けとなりますが、「特急仕上げオプション（+3,000円）」をご利用いただくことで、最短3日でお手元に配送可能です。退院日やお宮参りの日程に合わせてご調整いたします。
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Q. 書いてほしい文字や言葉のイメージをうまく伝えられるか不安です。</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        A. ご安心ください。「力強く」「優しく流れるように」といった大まかなキーワードをお伝えいただくだけで、師範代が2パターンの草案画像を作成してお送りします。画像を確認しながら微調整が可能です。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GUARANTEE & FLOW -->
         <section id="guarantee" class="page-section">
             <div class="section-header">
                 <h2 class="section-title">安心のお約束と制作の流れ</h2>
                 <p class="section-subtitle">インターネットでの特注ご依頼も、最後まで安心してご利用いただけます</p>
             </div>
 
-            <div class="guarantee-grid" style="margin-bottom: 60px;">
+            <div class="guarantee-grid" style="margin-bottom: 50px;">
                 <div class="guarantee-card">
                     <div class="guarantee-icon"><i class="fa-solid fa-shield-halved"></i></div>
                     <h3 class="guarantee-title">誤字脱字・100%再制作保証</h3>
@@ -837,7 +1248,7 @@
                 </div>
             </div>
 
-            <h3 style="text-align: center; font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 30px;">
+            <h3 style="text-align: center; font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 24px;">
                 ご依頼からお届けまでの4ステップ
             </h3>
 
@@ -846,7 +1257,7 @@
                     <div class="flow-num">01</div>
                     <div class="flow-text">
                         <h4>お問い合わせ・ヒアリング</h4>
-                        <p>下記フォームより、書かせていただくお名前・言葉、イメージ、ご予算をお知らせください。</p>
+                        <p>フォームまたは自動診断より、書かせていただくお名前・言葉、イメージをお知らせください。</p>
                     </div>
                 </div>
                 <div class="flow-step-item">
@@ -873,6 +1284,7 @@
             </div>
         </section>
 
+        <!-- CONTACT FORM -->
         <section id="contact" class="page-section">
             <div class="section-header">
                 <h2 class="section-title">ご相談・制作のご依頼</h2>
@@ -892,15 +1304,15 @@
                     <div class="form-group">
                         <label>ご用途</label>
                         <select class="form-control" id="formUsage">
-                            <option>命名書（お祝い）</option>
-                            <option>インテリア書・座右の銘</option>
-                            <option>店舗・企業ロゴ</option>
-                            <option>その他（贈り物等）</option>
+                            <option value="命名書（お祝い）">命名書（お祝い）</option>
+                            <option value="インテリア書・座右の銘">インテリア書・座右の銘</option>
+                            <option value="店舗・企業ロゴ">店舗・企業ロゴ</option>
+                            <option value="その他（贈り物等）">その他（贈り物等）</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>揮毫するお名前・文字 / ご要望・納期など <span style="color: var(--accent-vermilion);">*</span></label>
-                        <textarea class="form-control" rows="5" id="formDetails" placeholder="例：お子様のお名前「悠真（ゆうま）」、生年月日「2026年10月12日」、力強く温かみのある書風を希望。退院日の10月20日までに届いてほしい。" required></textarea>
+                        <textarea class="form-control" rows="6" id="formDetails" placeholder="例：お子様のお名前「悠真（ゆうま）」、生年月日「2026年10月12日」、力強く温かみのある書風を希望。退院日の10月20日までに届いてほしい。" required></textarea>
                     </div>
                     <button type="submit" class="btn-gold" style="width: 100%; padding: 14px; justify-content: center; font-size: 1rem;">
                         <i class="fa-regular fa-paper-plane"></i> 師範代へ相談内容を送信する（デモ）
@@ -911,6 +1323,18 @@
 
     </main>
 
+    <!-- スマホ限定常時表示ボトムバー -->
+    <div class="mobile-floating-bar">
+        <div class="mobile-floating-btns">
+            <button class="btn-gold" style="background: transparent; border: 1px solid var(--border-gold); color: var(--accent-gold);" onclick="switchSection('diagnostic')">
+                <i class="fa-solid fa-calculator"></i> 30秒自動見積り
+            </button>
+            <button class="btn-gold" onclick="switchSection('contact')">
+                <i class="fa-regular fa-envelope"></i> 制作のご相談
+            </button>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; 書家 師範代 墨芸工房 (BOKUIN). All Rights Reserved.</p>
@@ -918,6 +1342,7 @@
     </footer>
 
     <script>
+        // セクション切り替え
         function switchSection(sectionId) {
             document.querySelectorAll('.page-section').forEach(sec => {
                 sec.classList.remove('active');
@@ -939,6 +1364,20 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
+        // スマホメニュー開閉
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('hamburgerIcon');
+            menu.classList.toggle('open');
+            
+            if (menu.classList.contains('open')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+            }
+        }
+
+        // ギャラリーフィルター
         function filterGallery(category) {
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
@@ -953,31 +1392,54 @@
             });
         }
 
+        // FAQ開閉
+        function toggleFaq(element) {
+            element.classList.toggle('open');
+        }
+
+        // 30秒自動診断＆連動ロジック
         let diagValues = {
-            type: 12000,
-            style: 0,
-            frame: 3000
+            type: { price: 12000, label: '命名書（お祝い）' },
+            style: { price: 0, label: '伝統的・正統派（楷書/行書）' },
+            frame: { price: 3000, label: '木製高級額装（ナチュラル/ブラウン）' },
+            express: { price: 0, label: '通常発送（約5〜7日お届け）' }
         };
 
-        function selectDiag(element, category, price) {
+        function selectDiag(element, category, price, label) {
             const parent = element.parentElement;
             parent.querySelectorAll('.option-box').forEach(box => box.classList.remove('selected'));
             element.classList.add('selected');
 
-            diagValues[category] = price;
+            diagValues[category] = { price: price, label: label };
             updatePrice();
         }
 
         function updatePrice() {
-            const total = diagValues.type + diagValues.style + diagValues.frame;
+            const total = diagValues.type.price + diagValues.style.price + diagValues.frame.price + diagValues.express.price;
             document.getElementById('totalPrice').innerText = '￥' + total.toLocaleString();
+
+            const deliveryEl = document.getElementById('estimatedDelivery');
+            if (diagValues.express.price > 0) {
+                deliveryEl.innerHTML = '<i class="fa-solid fa-bolt" style="color:#e2c044;"></i> 目安納期: ⚡ <strong>特急対応・ご注文後 約 3 日でお届け</strong>';
+            } else {
+                deliveryEl.innerHTML = '<i class="fa-regular fa-clock"></i> 目安納期: ご注文決定後 約 5〜7 日でお届け';
+            }
         }
 
         function applyDiagToContact() {
             switchSection('contact');
+            
+            // フォームへ選択項目を自動セット
+            const selectEl = document.getElementById('formUsage');
+            if (selectEl) {
+                selectEl.value = diagValues.type.label.includes('命名書') ? '命名書（お祝い）' :
+                                 diagValues.type.label.includes('インテリア') ? 'インテリア書・座右の銘' :
+                                 diagValues.type.label.includes('ロゴ') ? '店舗・企業ロゴ' : 'その他（贈り物等）';
+            }
+
             const details = document.getElementById('formDetails');
             const totalPrice = document.getElementById('totalPrice').innerText;
-            details.value = `【診断経由の概算条件】\n概算想定費用: ${totalPrice}\nご希望イメージ・納期などをご記入ください：\n`;
+            details.value = `【診断ツール経由のお問い合わせ】\n・ご用途：${diagValues.type.label}\n・書風イメージ：${diagValues.style.label}\n・額装オプション：${diagValues.frame.label}\n・発送スピード：${diagValues.express.label}\n・概算見積もり費用：${totalPrice}\n------------------------------\n【揮毫テキスト・ご要望など】\n`;
         }
     </script>
 </body>
