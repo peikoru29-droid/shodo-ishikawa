@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>書家 師範代 墨芸工房 | 一生ものの命名書・オリジナル筆文字受託制作</title>
-    <meta name="description" content="文部科学省後援書道検定最高段位・師範代が揮毫する、一生ものの命名書・インテリア書・店舗ロゴ。越前和紙と職人手磨り墨を使用した本物の一筆をお届けします。">
+    <title>書家 墨芸工房｜命名書・インテリア書・筆文字制作</title>
+    <meta name="description" content="命名書・インテリア書・店舗ロゴなどの筆文字制作を承る墨芸工房。用途や書風、仕上げのご希望を伺い、費用と納期を事前に確認してから制作を進めます。">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="theme-color" content="#0a0a0c">
+    <link rel="canonical" href="https://peikoru29-droid.github.io/shodo-ishikawa/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     
     <!-- Open Graph Protocol (OGP) -->
-    <meta property="og:title" content="書家 師範代 墨芸工房 | 一生ものの命名書・筆文字受託制作">
-    <meta property="og:description" content="最高級和紙と手磨り墨で仕上げる一点もの筆文字作品。30秒自動見積り実施中。">
+    <meta property="og:title" content="書家 墨芸工房｜命名書・筆文字制作">
+    <meta property="og:description" content="命名書・インテリア書・店舗ロゴなどの筆文字制作。用途や書風、仕上げのご希望を伺い、費用・納期を事前に確認して進めます。">
+    <meta property="og:url" content="https://peikoru29-droid.github.io/shodo-ishikawa/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://peikoru29-droid.github.io/shodo-ishikawa/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="書家 墨芸工房 — 命名書・インテリア書・筆文字制作">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="書家 墨芸工房｜命名書・インテリア書・筆文字制作">
+    <meta name="twitter:description" content="命名書・インテリア書・店舗ロゴなどの筆文字制作。用途・費用・納期を事前に確認して進めます。">
+    <meta name="twitter:image" content="https://peikoru29-droid.github.io/shodo-ishikawa/ogp.png">
+    <meta property="og:site_name" content="書家 墨芸工房">
+    <meta property="og:locale" content="ja_JP">
 
-    <!-- Google Fonts & FontAwesome -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Zen+Old+Mincho:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 外部フォント・アイコンCDNに依存せず、端末標準フォントと記号で表示 -->
     
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "書家 墨芸工房",
+      "url": "https://peikoru29-droid.github.io/shodo-ishikawa/",
+      "inLanguage": "ja-JP",
+      "description": "命名書・インテリア書・店舗ロゴなどの筆文字制作"
+    }
+    </script>
     <style>
         :root {
             --bg-dark: #0a0a0c;
@@ -29,7 +50,7 @@
             --accent-gold: #e2c044;
             --accent-gold-grad: linear-gradient(135deg, #fff3c4 0%, #d4af37 45%, #aa7c11 100%);
             --accent-vermilion: #c0392b;
-            --font-serif: 'Shippori Mincho', 'Zen Old Mincho', "Yu Mincho", serif;
+            --font-serif: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Noto Serif CJK JP', serif;
             --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
@@ -45,7 +66,7 @@
 
         body {
             background-color: var(--bg-dark);
-            background-image: linear-gradient(rgba(10, 10, 12, 0.90), rgba(10, 10, 12, 0.93)), url('http://googleusercontent.com/image_collection/image_retrieval/1473445811517408268_0');
+            background-image: radial-gradient(ellipse at 18% 8%, rgba(100, 70, 30, 0.16), transparent 42%), radial-gradient(ellipse at 86% 45%, rgba(85, 18, 18, 0.12), transparent 35%);
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -53,7 +74,7 @@
             font-family: var(--font-sans);
             line-height: 1.8;
             overflow-x: hidden;
-            padding-bottom: 60px; /* モバイル固定バー用余白 */
+            padding-bottom: 80px; /* 固定バーとiPhoneのセーフエリア分 */
         }
 
         .serif { font-family: var(--font-serif); }
@@ -227,13 +248,88 @@
 
         /* ページセクション */
         .page-section {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out;
-            scroll-margin-top: 80px;
+            display: block;
+            scroll-margin-top: 92px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.12);
         }
 
         .page-section.active {
             display: block;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -60px;
+            left: 12px;
+            z-index: 2000;
+            padding: 10px 14px;
+            background: #fff3c4;
+            color: #111;
+            border-radius: 4px;
+        }
+        .skip-link:focus { top: 12px; }
+        :focus-visible { outline: 3px solid #fff0a8; outline-offset: 3px; }
+        .hero::after {
+            content: "";
+            position: absolute;
+            right: 10%;
+            top: 8%;
+            width: 2px;
+            height: 78%;
+            background: linear-gradient(transparent, rgba(212,175,55,.24), transparent);
+            transform: rotate(18deg);
+            pointer-events: none;
+        }
+        /* アイコン：外部ライブラリを使わず、回線状況に左右されない記号表示 */
+        i.fa-solid, i.fa-regular { display: inline-block; font-style: normal; line-height: 1; }
+        .fa-stamp::before { content: "印"; }
+        .fa-calculator::before { content: "▦"; }
+        .fa-envelope::before { content: "✉"; }
+        .fa-bars::before { content: "☰"; }
+        .fa-xmark::before { content: "×"; }
+        .fa-scroll::before { content: "▤"; }
+        .fa-pen-nib::before { content: "✒"; }
+        .fa-ruler-combined::before { content: "↔"; }
+        .fa-clock::before { content: "◷"; }
+        .fa-chevron-down::before { content: "⌄"; }
+        .fa-shield-halved::before { content: "◇"; }
+        .fa-truck-fast::before { content: "➜"; }
+        .fa-paper-plane::before { content: "➤"; }
+
+        .gallery-note {
+            max-width: 820px;
+            margin: 0 auto 24px;
+            padding: 12px 16px;
+            border-left: 3px solid var(--border-gold);
+            background: rgba(212,175,55,.06);
+            color: var(--text-secondary);
+            font-size: .84rem;
+        }
+        .artwork-svg { display:block; width:100%; height:100%; }
+        .form-status {
+            margin-top: 14px;
+            padding: 12px 14px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            font-size: .88rem;
+            overflow-wrap: anywhere;
+        }
+        .form-status:empty { display:none; }
+        .option-box {
+            color: var(--text-primary);
+            width: 100%;
+            font: inherit;
+            font-family: var(--font-serif);
+        }
+        .faq-question:focus-visible { outline-offset: 4px; }
+        .faq-heading { margin: 0; font-size: inherit; }
+        .faq-question { width: 100%; background: transparent; border: 0; color: inherit; text-align: left; cursor: pointer; appearance: none; }
+        .faq-answer[hidden] { display: none !important; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
         }
 
         @keyframes fadeIn {
@@ -245,7 +341,7 @@
         .hero {
             padding: 70px 0;
             position: relative;
-            background: linear-gradient(to bottom, rgba(10, 10, 12, 0.4), rgba(10, 10, 12, 0.88)), url('http://googleusercontent.com/image_collection/image_retrieval/352630824702898435_0');
+            background: radial-gradient(ellipse at 82% 35%, rgba(212, 175, 55, 0.15), transparent 36%), linear-gradient(120deg, #111114 0%, #171512 55%, #0b0b0d 100%);
             background-size: cover;
             background-position: center;
             border-radius: 12px;
@@ -771,6 +867,7 @@
 
         .form-control {
             width: 100%;
+            min-height: 46px;
             background-color: var(--bg-dark);
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -796,7 +893,7 @@
             background-color: rgba(12, 12, 15, 0.95);
             backdrop-filter: blur(12px);
             border-top: 1px solid var(--border-gold);
-            padding: 8px 12px;
+            padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
             z-index: 999;
             box-shadow: 0 -4px 20px rgba(0,0,0,0.6);
         }
@@ -825,7 +922,7 @@
         /* モバイル特化レスポンシブ最適化 */
         @media (max-width: 768px) {
             body {
-                padding-bottom: 64px; /* ボトムバー領域確保 */
+                padding-bottom: calc(82px + env(safe-area-inset-bottom)); /* ボトムバー領域確保 */
             }
 
             .container {
@@ -944,6 +1041,10 @@
                 font-size: 1.6rem;
             }
 
+            .form-control {
+                font-size: 16px;
+            }
+
             .form-container {
                 padding: 20px 14px;
                 border-radius: 12px;
@@ -962,57 +1063,58 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">本文へスキップ</a>
 
     <!-- ヘッダー -->
     <header>
         <div class="container nav">
-            <a href="#" class="logo" onclick="switchSection('home')">
+            <a href="#home" class="logo" aria-label="墨芸工房 ホーム" onclick="switchSection('home'); return false;">
                 <div class="logo-mark">墨</div>
-                <div class="logo-text">書家 師範代 墨芸工房</div>
+                <div class="logo-text">書家 墨芸工房</div>
             </a>
 
             <!-- PCナビゲーション -->
-            <div class="nav-links">
-                <span class="nav-item active" onclick="switchSection('home')">ホーム</span>
-                <span class="nav-item" onclick="switchSection('gallery')">作品ギャラリー</span>
-                <span class="nav-item" onclick="switchSection('diagnostic')">30秒自動見積り</span>
-                <span class="nav-item" onclick="switchSection('reviews')">実績・Q&A</span>
-                <span class="nav-item" onclick="switchSection('guarantee')">安心保証・工程</span>
-                <span class="nav-item" onclick="switchSection('contact')">ご相談・ご依頼</span>
-            </div>
+            <nav class="nav-links" aria-label="メインナビゲーション">
+                <a class="nav-item active" href="#home" onclick="switchSection('home'); return false;">ホーム</a>
+                <a class="nav-item" href="#gallery" onclick="switchSection('gallery'); return false;">作品ギャラリー</a>
+                <a class="nav-item" href="#diagnostic" onclick="switchSection('diagnostic'); return false;">概算見積り</a>
+                <a class="nav-item" href="#reviews" onclick="switchSection('reviews'); return false;">ご依頼前のQ&A</a>
+                <a class="nav-item" href="#guarantee" onclick="switchSection('guarantee'); return false;">制作の流れ</a>
+                <a class="nav-item" href="#contact" onclick="switchSection('contact'); return false;">ご相談・ご依頼</a>
+            </nav>
 
             <button class="btn-gold" onclick="switchSection('contact')">
                 <i class="fa-regular fa-envelope"></i> 制作のご相談
             </button>
 
             <!-- スマホハンバーガーボタン -->
-            <button class="hamburger-btn" onclick="toggleMobileMenu()">
+            <button class="hamburger-btn" type="button" aria-label="メニューを開く" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu()">
                 <i class="fa-solid fa-bars" id="hamburgerIcon"></i>
             </button>
         </div>
 
         <!-- スマホ用スライドメニュー -->
-        <div class="mobile-menu" id="mobileMenu">
-            <span class="nav-item" onclick="switchSection('home'); toggleMobileMenu();">ホーム</span>
-            <span class="nav-item" onclick="switchSection('gallery'); toggleMobileMenu();">作品ギャラリー</span>
-            <span class="nav-item" onclick="switchSection('diagnostic'); toggleMobileMenu();">30秒自動見積り</span>
-            <span class="nav-item" onclick="switchSection('reviews'); toggleMobileMenu();">実績・よくある質問</span>
-            <span class="nav-item" onclick="switchSection('guarantee'); toggleMobileMenu();">安心保証・制作工程</span>
-            <span class="nav-item" onclick="switchSection('contact'); toggleMobileMenu();">ご相談・制作ご依頼</span>
-        </div>
+        <nav class="mobile-menu" id="mobileMenu" aria-label="モバイルナビゲーション">
+            <a class="nav-item" href="#home" onclick="switchSection('home'); toggleMobileMenu(); return false;">ホーム</a>
+            <a class="nav-item" href="#gallery" onclick="switchSection('gallery'); toggleMobileMenu(); return false;">作品ギャラリー</a>
+            <a class="nav-item" href="#diagnostic" onclick="switchSection('diagnostic'); toggleMobileMenu(); return false;">概算見積り</a>
+            <a class="nav-item" href="#reviews" onclick="switchSection('reviews'); toggleMobileMenu(); return false;">ご依頼前のQ&A</a>
+            <a class="nav-item" href="#guarantee" onclick="switchSection('guarantee'); toggleMobileMenu(); return false;">制作の流れ</a>
+            <a class="nav-item" href="#contact" onclick="switchSection('contact'); toggleMobileMenu(); return false;">ご相談・ご依頼</a>
+        </nav>
     </header>
 
-    <main class="container">
+    <main class="container" id="main-content">
 
         <!-- HOME -->
         <section id="home" class="page-section active">
             <div class="hero">
                 <div class="hero-body">
                     <div class="hero-badge">
-                        <i class="fa-solid fa-stamp"></i> 文部科学省後援 書道検定 最高段位 師範代 揮毫
+                        <i class="fa-solid fa-stamp"></i> 一点ずつ、用途に合わせて仕立てる筆文字作品
                     </div>
                     <h1>命を宿す一筆。<br>一生ものの「命名書」と「筆文字作品」</h1>
-                    <p class="hero-sub">お子様の誕生を祝う格式高き命名書から、インテリア書、店舗ロゴまで。<br>師範代の確かな腕と厳選した本物素材（越前和紙・最高級墨）で一点ずつ心を込めて揮毫します。</p>
+                    <p class="hero-sub">お子様の誕生を祝う命名書から、インテリア書、店舗ロゴまで。<br>用途や飾る場所、ご希望の書風を伺い、内容・費用・納期を確認してから制作を進めます。</p>
                     
                     <div class="hero-cta">
                         <button class="btn-gold" style="padding: 12px 24px; font-size: 0.92rem;" onclick="switchSection('diagnostic')">
@@ -1032,16 +1134,16 @@
 
             <div class="metrics-bar">
                 <div class="metric-card">
-                    <div class="metric-number">100 %</div>
-                    <div class="metric-label">事前後書チェック（誤字ゼロ保証）</div>
+                    <div class="metric-number">一点もの</div>
+                    <div class="metric-label">ご希望に合わせた筆文字制作</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-number">師範代</div>
-                    <div class="metric-label">最高位書道格付・確かな技術の裏付け</div>
+                    <div class="metric-number">事前確認</div>
+                    <div class="metric-label">文字・仕様・費用を確認してから制作</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-number">最短3日</div>
-                    <div class="metric-label">お急ぎの命名書・退院日にあわせた発送対応</div>
+                    <div class="metric-number">個別相談</div>
+                    <div class="metric-label">ご希望の納期を事前に確認</div>
                 </div>
             </div>
 
@@ -1053,13 +1155,18 @@
             <div class="guarantee-grid">
                 <div class="guarantee-card">
                     <div class="guarantee-icon"><i class="fa-solid fa-scroll"></i></div>
-                    <h3 class="guarantee-title">1. 最高級越前和紙と職人手磨り墨</h3>
-                    <p class="guarantee-desc">100年先まで色あせない伝統の越前本和紙と、深みのある漆黒を生み出す職人謹製の古墨を使用。本物だけが持つ存在感を放ちます。</p>
+                    <h3 class="guarantee-title">1. 紙・墨・額装を用途に合わせて相談</h3>
+                    <p class="guarantee-desc">命名書・インテリア書・ロゴなど、飾る場所やご予算に合わせて仕上げ方法をご相談いただけます。使用する素材・仕様は正式なお見積り時に確認します。</p>
                 </div>
                 <div class="guarantee-card">
                     <div class="guarantee-icon"><i class="fa-solid fa-pen-nib"></i></div>
-                    <h3 class="guarantee-title">2. 草案2案提示＆無料修正対応</h3>
-                    <p class="guarantee-desc">「届いてみたらイメージと違った」を防ぐため、清書前に2パターンの筆文字草案を写真で共有。ご納得いただいてから仕上げます。</p>
+                    <h3 class="guarantee-title">2. 制作前にイメージ・表記を確認</h3>
+                    <p class="guarantee-desc">お名前・文字・書風・サイズなどのご希望を制作前に確認します。草案の有無や修正回数・費用は、ご依頼内容に応じて事前にご案内します。</p>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                    <h3 class="guarantee-title">3. 内容・費用・納期を事前に確認</h3>
+                    <p class="guarantee-desc">ご希望の文字や用途、額装、納期を伺い、制作に入る前に条件をすり合わせます。追加料金がある場合も、事前確認のうえで進めます。</p>
                 </div>
             </div>
         </section>
@@ -1068,47 +1175,56 @@
         <section id="gallery" class="page-section">
             <div class="section-header">
                 <h2 class="section-title">作品ギャラリー</h2>
-                <p class="section-subtitle">命名書・インテリア書・ロゴ制作など、多様な書風に対応いたします</p>
+                <p class="section-subtitle">命名書・インテリア書・ロゴ制作など、制作イメージをご覧ください。実作品の写真・説明は公開前に差し替えてください</p>
             </div>
 
-            <div class="tab-buttons">
-                <button class="tab-btn active" onclick="filterGallery('all')">すべて表示</button>
-                <button class="tab-btn" onclick="filterGallery('meimei')">命名書</button>
-                <button class="tab-btn" onclick="filterGallery('interior')">インテリア書</button>
-                <button class="tab-btn" onclick="filterGallery('logo')">店舗・企業ロゴ</button>
+            <p class="gallery-note">下記の図版はレイアウト確認用の制作イメージです。実際の受注作品ではありません。公開時は、ご自身が制作した作品の写真・説明に差し替えてください。</p>
+            <div class="tab-buttons" role="group" aria-label="作品カテゴリ">
+                <button type="button" class="tab-btn active" aria-pressed="true" onclick="filterGallery('all', this)">すべて表示</button>
+                <button type="button" class="tab-btn" aria-pressed="false" onclick="filterGallery('meimei', this)">命名書</button>
+                <button type="button" class="tab-btn" aria-pressed="false" onclick="filterGallery('interior', this)">インテリア書</button>
+                <button type="button" class="tab-btn" aria-pressed="false" onclick="filterGallery('logo', this)">店舗・企業ロゴ</button>
             </div>
 
             <div class="gallery-grid">
                 <div class="gallery-card" data-category="meimei">
                     <div class="gallery-img-wrapper">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/16940030195766096833_0" alt="命名額" class="gallery-img">
+                        <svg class="artwork-svg" viewBox="0 0 600 460" role="img" aria-label="命名書の制作イメージ 悠真"><defs><linearGradient id="paper1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdf2"/><stop offset="1" stop-color="#e9ddc3"/></linearGradient><filter id="grain1"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values=".3 0 0 0 .5 .3 0 0 0 .4 .3 0 0 0 .2 0 0 0 .08 0"/></filter></defs><rect width="600" height="460" fill="#332b22"/><rect x="37" y="20" width="526" height="420" rx="5" fill="#b48b4c"/><rect x="52" y="35" width="496" height="390" fill="url(#paper1)" stroke="#f5e9c8" stroke-width="5"/><rect x="52" y="35" width="496" height="390" filter="url(#grain1)" opacity=".18"/><text x="300" y="214" text-anchor="middle" font-family="serif" font-size="104" font-weight="700" fill="#181612" letter-spacing="10">悠真</text><path d="M130 252 Q300 280 469 250" stroke="#1b1813" stroke-width="3" fill="none" opacity=".7"/><rect x="446" y="330" width="55" height="55" fill="#a32b22"/><text x="474" y="366" text-anchor="middle" font-family="serif" font-size="22" fill="#fff3de">墨芸</text></svg>
                     </div>
                     <div class="gallery-content">
                         <span class="gallery-tag">命名書 / 伝統額装</span>
-                        <h3 class="gallery-title">命名額「悠真（ゆうま）」</h3>
-                        <p class="gallery-desc">悠々とスケールの大きな人生を歩んでほしいとの願いを込め、正統派の凛とした楷書・行書で揮毫。高級杉額装仕上げ。</p>
+                        <h3 class="gallery-title">命名書の制作イメージ「悠真」</h3>
+                        <p class="gallery-desc">伝統的な和紙と額装を想定した、レイアウト確認用の図版です。実際の作品写真に差し替えてください。</p>
                     </div>
                 </div>
 
                 <div class="gallery-card" data-category="meimei">
                     <div class="gallery-img-wrapper">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/16874518651475199862_0" alt="金泥命名書" class="gallery-img">
+                        <svg class="artwork-svg" viewBox="0 0 600 460" role="img" aria-label="金色をアクセントにした命名書の制作イメージ 凛花"><defs><linearGradient id="black2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#27231c"/><stop offset="1" stop-color="#080809"/></linearGradient><linearGradient id="gold2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff2bd"/><stop offset=".5" stop-color="#d4af55"/><stop offset="1" stop-color="#8b692d"/></linearGradient></defs><rect width="600" height="460" fill="#161416"/><rect x="30" y="24" width="540" height="412" rx="12" fill="url(#gold2)"/><rect x="45" y="39" width="510" height="382" rx="5" fill="url(#black2)" stroke="#edcf7e" stroke-width="1.5"/><path d="M104 348 Q210 302 284 338 T493 333" fill="none" stroke="#d4af55" stroke-width="2" opacity=".7"/><text x="300" y="235" text-anchor="middle" font-family="serif" font-size="106" font-weight="700" fill="url(#gold2)" letter-spacing="12">凛花</text><text x="300" y="285" text-anchor="middle" font-family="serif" font-size="18" fill="#e8d8b3" letter-spacing="6">RINKA · NAME ART</text></svg>
                     </div>
                     <div class="gallery-content">
                         <span class="gallery-tag">命名書 / モダンアクリル</span>
-                        <h3 class="gallery-title">モダン金泥命名書「凛花」</h3>
-                        <p class="gallery-desc">現代の洋室インテリアにも調和する、金泥泥墨による優美な一筆。透明アクリルフレーム付き。</p>
+                        <h3 class="gallery-title">モダン命名書の制作イメージ「凛花」</h3>
+                        <p class="gallery-desc">金色をアクセントにしたデザイン案です。素材・額装の実際の仕様はご依頼内容に応じてご案内します。</p>
                     </div>
                 </div>
 
                 <div class="gallery-card" data-category="interior">
                     <div class="gallery-img-wrapper">
-                        <img src="http://googleusercontent.com/image_collection/image_retrieval/15432238819965182714_0" alt="インテリア書" class="gallery-img">
+                        <svg class="artwork-svg" viewBox="0 0 600 460" role="img" aria-label="インテリア書の制作イメージ 飛翔"><defs><linearGradient id="paper3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eee5d2"/><stop offset="1" stop-color="#cfc2a8"/></linearGradient></defs><rect width="600" height="460" fill="#292622"/><rect x="52" y="22" width="496" height="416" fill="#8a6d45"/><rect x="66" y="36" width="468" height="388" fill="url(#paper3)"/><path d="M120 130 Q160 108 213 145 T315 126 T455 147" fill="none" stroke="#aa9a7a" stroke-width="1.5" opacity=".6"/><text x="300" y="266" text-anchor="middle" font-family="serif" font-size="122" font-weight="700" fill="#191816" letter-spacing="12">飛翔</text><path d="M154 304 Q290 338 438 296" stroke="#24211d" stroke-width="4" fill="none" opacity=".8"/><text x="300" y="376" text-anchor="middle" font-family="serif" font-size="17" letter-spacing="8" fill="#554936">SHODO ART</text></svg>
                     </div>
                     <div class="gallery-content">
                         <span class="gallery-tag">インテリア書</span>
-                        <h3 class="gallery-title">座右の銘「飛翔」</h3>
-                        <p class="gallery-desc">新築祝い・開業祝いに人気の力強い掠れ（かすれ）を活かした草書作品。空間に静かな躍動感を与えます。</p>
+                        <h3 class="gallery-title">インテリア書の制作イメージ「飛翔」</h3>
+                        <p class="gallery-desc">飾る空間を想定したデザイン案です。実際の作風や仕上がりは、制作事例の掲載後にご確認いただけます。</p>
+                    </div>
+                </div>
+                <div class="gallery-card" data-category="logo">
+                    <div class="gallery-img-wrapper"><svg class="artwork-svg" viewBox="0 0 600 460" role="img" aria-label="店舗ロゴ筆文字の制作イメージ"><defs><linearGradient id="paper4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fcf8ec"/><stop offset="1" stop-color="#ddd0b7"/></linearGradient></defs><rect width="600" height="460" fill="#26221e"/><rect x="35" y="28" width="530" height="404" fill="url(#paper4)" stroke="#9f8350" stroke-width="2"/><circle cx="300" cy="205" r="119" fill="none" stroke="#a52823" stroke-width="2" opacity=".75"/><path d="M206 228 Q241 158 284 210 T388 190" fill="none" stroke="#191714" stroke-width="14" stroke-linecap="round" opacity=".92"/><text x="300" y="253" text-anchor="middle" font-family="serif" font-size="83" font-weight="700" fill="#161512" letter-spacing="9">余白</text><text x="300" y="324" text-anchor="middle" font-family="serif" font-size="18" letter-spacing="7" fill="#67583f">BRAND CALLIGRAPHY</text></svg></div>
+                    <div class="gallery-content">
+                        <span class="gallery-tag">店舗・企業ロゴ / 制作イメージ</span>
+                        <h3 class="gallery-title">店舗ロゴの制作イメージ「余白」</h3>
+                        <p class="gallery-desc">筆文字をブランド表現に使用する場合のレイアウト案です。商標・利用範囲などはご依頼内容に応じて確認します。</p>
                     </div>
                 </div>
             </div>
@@ -1123,45 +1239,45 @@
 
             <div class="diagnostic-card">
                 <div class="diag-step">
-                    <div class="diag-label"><span class="diag-label-num">1</span> ご用途をお選びください</div>
-                    <div class="radio-options">
-                        <div class="option-box selected" onclick="selectDiag(this, 'type', 12000, '命名書（お祝い）')">命名書（お祝い）</div>
-                        <div class="option-box" onclick="selectDiag(this, 'type', 15000, 'インテリア書・座右の銘')">インテリア書・座右の銘</div>
-                        <div class="option-box" onclick="selectDiag(this, 'type', 30000, '店舗・企業ロゴ（商用可）')">店舗・企業ロゴ（商用可）</div>
+                    <div class="diag-label" id="diagnostic-type-label"><span class="diag-label-num" aria-hidden="true">1</span> ご用途をお選びください</div>
+                    <div class="radio-options" role="group" aria-labelledby="diagnostic-type-label">
+                        <button type="button" class="option-box selected" aria-pressed="true" onclick="selectDiag(this, 'type', 12000, '命名書（お祝い）')">命名書（お祝い）</button>
+                        <button type="button" class="option-box" aria-pressed="false" onclick="selectDiag(this, 'type', 15000, 'インテリア書・座右の銘')">インテリア書・座右の銘</button>
+                        <button type="button" class="option-box" aria-pressed="false" onclick="selectDiag(this, 'type', 30000, '店舗・企業ロゴ（商用可）')">店舗・企業ロゴ（商用可）</button>
                     </div>
                 </div>
 
                 <div class="diag-step">
-                    <div class="diag-label"><span class="diag-label-num">2</span> 書風のイメージをお選びください</div>
-                    <div class="radio-options">
-                        <div class="option-box selected" onclick="selectDiag(this, 'style', 0, '伝統的・正統派（楷書/行書）')">伝統的・正統派（楷書/行書）</div>
-                        <div class="option-box" onclick="selectDiag(this, 'style', 2000, '力強い・ダイナミック')">力強い・ダイナミック</div>
-                        <div class="option-box" onclick="selectDiag(this, 'style', 2000, '優美・流麗・モダン')">優美・流麗・モダン</div>
+                    <div class="diag-label" id="diagnostic-style-label"><span class="diag-label-num" aria-hidden="true">2</span> 書風のイメージをお選びください</div>
+                    <div class="radio-options" role="group" aria-labelledby="diagnostic-style-label">
+                        <button type="button" class="option-box selected" aria-pressed="true" onclick="selectDiag(this, 'style', 0, '伝統的・正統派（楷書/行書）')">伝統的・正統派（楷書/行書）</button>
+                        <button type="button" class="option-box" aria-pressed="false" onclick="selectDiag(this, 'style', 2000, '力強い・ダイナミック')">力強い・ダイナミック</button>
+                        <button type="button" class="option-box" aria-pressed="false" onclick="selectDiag(this, 'style', 2000, '優美・流麗・モダン')">優美・流麗・モダン</button>
                     </div>
                 </div>
 
                 <div class="diag-step">
-                    <div class="diag-label"><span class="diag-label-num">3</span> 仕上げ・額装オプション</div>
-                    <div class="radio-options">
-                        <div class="option-box selected" onclick="selectDiag(this, 'frame', 3000, '木製高級額装（ナチュラル/ブラウン）')">木製高級額装</div>
-                        <div class="option-box" onclick="selectDiag(this, 'frame', 5000, '透明アクリルアートフレーム')">透明アクリルフレーム</div>
-                        <div class="option-box" onclick="selectDiag(this, 'frame', 0, '本紙のみ（裏打ち済・額なし）')">本紙のみ（裏打ち済）</div>
+                    <div class="diag-label" id="diagnostic-frame-label"><span class="diag-label-num" aria-hidden="true">3</span> 仕上げ・額装オプション</div>
+                    <div class="radio-options" role="group" aria-labelledby="diagnostic-frame-label">
+                        <button type="button" class="option-box selected" aria-pressed="true" onclick="selectDiag(this, 'frame', 3000, '木製高級額装（ナチュラル/ブラウン）')">木製高級額装</button>
+                        <button type="button" class="option-box" aria-pressed="false" onclick="selectDiag(this, 'frame', 5000, '透明アクリルアートフレーム')">透明アクリルフレーム</button>
+                        <button type="button" class="option-box" aria-pressed="false" onclick="selectDiag(this, 'frame', 0, '本紙のみ（裏打ち済・額なし）')">本紙のみ（裏打ち済）</button>
                     </div>
                 </div>
 
                 <div class="diag-step">
-                    <div class="diag-label"><span class="diag-label-num">4</span> 発送スピード</div>
-                    <div class="radio-options">
-                        <div class="option-box selected" onclick="selectDiag(this, 'express', 0, '通常発送（5〜7日）')">通常発送（約5〜7日）</div>
-                        <div class="option-box" onclick="selectDiag(this, 'express', 3000, '特急仕上げ（最短3日届）')">⚡ 特急仕上げ（最短3日届 +￥3,000）</div>
+                    <div class="diag-label" id="diagnostic-express-label"><span class="diag-label-num" aria-hidden="true">4</span> 発送スピード</div>
+                    <div class="radio-options" role="group" aria-labelledby="diagnostic-express-label">
+                        <button type="button" class="option-box selected" aria-pressed="true" onclick="selectDiag(this, 'express', 0, '通常発送（目安5〜7日・要確認）')">通常発送（約5〜7日）</button>
+                        <button type="button" class="option-box" aria-pressed="false" onclick="selectDiag(this, 'express', 3000, '特急仕上げ（目安3日・要確認）')">⚡ 特急仕上げ（目安3日・要確認 +￥3,000）</button>
                     </div>
                 </div>
 
                 <div class="diag-result-box">
-                    <div style="font-size: 0.85rem; color: var(--text-secondary);">概算制作費用（税・送料込み）</div>
-                    <div class="result-price" id="totalPrice">￥15,000</div>
-                    <div style="font-size: 0.82rem; color: var(--accent-gold);" id="estimatedDelivery">
-                        <i class="fa-regular fa-clock"></i> 目安納期: ご注文決定後 約 5〜7 日でお届け
+                    <div style="font-size: 0.85rem; color: var(--text-secondary);">概算制作費（正式な料金はお見積りで確定）</div>
+                    <div class="result-price" id="totalPrice" aria-live="polite" aria-atomic="true">￥15,000</div>
+                    <div style="font-size: 0.82rem; color: var(--accent-gold);" id="estimatedDelivery" aria-live="polite">
+                        <i class="fa-regular fa-clock"></i> 目安納期: 約 5〜7 日（内容・配送条件により変動）
                     </div>
                     <button class="btn-gold" style="margin-top: 18px; width: 100%; padding: 12px; font-size: 0.95rem;" onclick="applyDiagToContact()">
                         この条件で相談・依頼してみる
@@ -1173,22 +1289,22 @@
         <!-- REVIEWS & FAQ -->
         <section id="reviews" class="page-section">
             <div class="section-header">
-                <h2 class="section-title">揮毫実績とお客様の声</h2>
-                <p class="section-subtitle">全国のお客様から心温まるお声をいただいております</p>
+                <h2 class="section-title">ご依頼前に知っていただきたいこと</h2>
+                <p class="section-subtitle">費用・納期・仕様を事前に確認し、内容にご納得いただいてから制作を進めます</p>
             </div>
 
             <div class="reviews-grid">
                 <div class="review-card">
-                    <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <div class="review-title">「一生の宝物になりました」</div>
-                    <p class="review-text">長男の誕生に合わせて注文しました。事前にサンプル草案を2案見せていただけたので安心して任せられました。木製額の重厚感も素晴らしく感動です。</p>
-                    <div class="review-author">京都府 K.S様（命名額「悠真」ご依頼）</div>
+                    <div class="review-title">ご依頼内容を先に確認</div>
+                    <p class="review-text">文字・用途・サイズ・仕上げ・希望納期を確認し、条件をすり合わせてから制作を進めます。</p>
                 </div>
                 <div class="review-card">
-                    <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <div class="review-title">「退院日に間に合わせてくれました」</div>
-                    <p class="review-text">急な出産だったのですが、特急対応で退院日に間に合わせていただきました。親族へのお披露目でも大好評でした！</p>
-                    <div class="review-author">東京都 M.Y様（金泥命名書ご依頼）</div>
+                    <div class="review-title">料金・納期を明確に</div>
+                    <p class="review-text">概算表示は目安です。追加オプションや送料などを含めた正式な費用と納期は、ご依頼前にご案内します。</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-title">実作品の掲載を大切に</div>
+                    <p class="review-text">ギャラリーは現在、制作イメージを表示しています。実作品の写真・お客様の感想は、許可を得た内容のみ掲載します。</p>
                 </div>
             </div>
 
@@ -1198,31 +1314,31 @@
             </div>
 
             <div class="faq-accordion">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
+                <div class="faq-item">
+                    <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-1" onclick="toggleFaq(this)">
                         <span>Q. 万が一、誤字や不備があった場合の保証はありますか？</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        A. 100%完全再制作保証がございます。当方の揮毫ミスはもちろん、万が一の輸送中の損傷についても無償にて即座に再仕上げ・再発送いたします。
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button></h3>
+                    <div class="faq-answer" id="faq-answer-1" hidden>
+                        A. 文字や仕上がりについて不安な点があれば、制作前にご相談ください。再制作・返品・配送中の破損への対応条件は、正式なご依頼前に明示します。
                     </div>
                 </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
+                <div class="faq-item">
+                    <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-2" onclick="toggleFaq(this)">
                         <span>Q. 急ぎで命名書が必要なのですが、何日で届きますか？</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        A. 通常はご注文確定から約5〜7日でお届けとなりますが、「特急仕上げオプション（+3,000円）」をご利用いただくことで、最短3日でお手元に配送可能です。退院日やお宮参りの日程に合わせてご調整いたします。
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button></h3>
+                    <div class="faq-answer" id="faq-answer-2" hidden>
+                        A. 納期は作品の内容、額装、制作状況、配送地域によって変わります。ご希望日をお知らせください。特急対応の可否と追加費用は、ご依頼前に個別に確認します。
                     </div>
                 </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-question">
+                <div class="faq-item">
+                    <h3 class="faq-heading"><button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-answer-3" onclick="toggleFaq(this)">
                         <span>Q. 書いてほしい文字や言葉のイメージをうまく伝えられるか不安です。</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        A. ご安心ください。「力強く」「優しく流れるように」といった大まかなキーワードをお伝えいただくだけで、師範代が2パターンの草案画像を作成してお送りします。画像を確認しながら微調整が可能です。
+                        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button></h3>
+                    <div class="faq-answer" id="faq-answer-3" hidden>
+                        A. ご安心ください。「力強く」「優しく流れるように」といったイメージをお伝えください。草案の提示可否、修正回数、追加費用などは制作内容に合わせて事前にご案内します。
                     </div>
                 </div>
             </div>
@@ -1238,13 +1354,13 @@
             <div class="guarantee-grid" style="margin-bottom: 50px;">
                 <div class="guarantee-card">
                     <div class="guarantee-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 class="guarantee-title">誤字脱字・100%再制作保証</h3>
-                    <p class="guarantee-desc">万が一、お届けした作品に文字誤りや不備があった場合、無償にて即座に再制作・再発送いたします。</p>
+                    <h3 class="guarantee-title">文字・表記を事前に確認</h3>
+                    <p class="guarantee-desc">お名前や言葉、読み方などを制作前にご確認ください。納品後の修正・再制作の条件は、ご依頼前に明示します。</p>
                 </div>
                 <div class="guarantee-card">
                     <div class="guarantee-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                    <h3 class="guarantee-title">特急対応・指定日配送保証</h3>
-                    <p class="guarantee-desc">退院日やお宮参り、開店日にあわせたお急ぎ発送（最短3日）のご相談にも柔軟に対応いたします。</p>
+                    <h3 class="guarantee-title">ご希望の納期を事前に確認</h3>
+                    <p class="guarantee-desc">退院日や開店日などの希望日をお知らせください。制作・配送条件を確認し、対応可能な納期をご案内します。</p>
                 </div>
             </div>
 
@@ -1264,21 +1380,21 @@
                     <div class="flow-num">02</div>
                     <div class="flow-text">
                         <h4>草案（サンプル筆文字）のご確認</h4>
-                        <p>師範代が2パターンの筆文字草案を作成し、写真をメールでお送りします。書風をご確認いただけます。</p>
+                        <p>草案の提示方法・回数などを事前に確認し、必要に応じてイメージをすり合わせます。</p>
                     </div>
                 </div>
                 <div class="flow-step-item">
                     <div class="flow-num">03</div>
                     <div class="flow-text">
                         <h4>本清書・裏打ち・額装仕上げ</h4>
-                        <p>選んでいただいた書風にて最高級和紙に清書し、シワを伸ばす「裏打ち」加工を施して額装します。</p>
+                        <p>確定した仕様に沿って清書し、ご希望に応じて裏打ち・額装などの仕上げを行います。</p>
                     </div>
                 </div>
                 <div class="flow-step-item">
                     <div class="flow-num">04</div>
                     <div class="flow-text">
                         <h4>厳重梱包にて発送・納品</h4>
-                        <p>作品に傷がつかないよう専用の化粧箱と緩衝材で厳重に梱包し、追跡番号を添えて発送します。</p>
+                        <p>作品に傷がつかないよう配送方法・梱包・送料・追跡の有無を事前に確認し、合意した方法で納品します。</p>
                     </div>
                 </div>
             </div>
@@ -1292,18 +1408,18 @@
             </div>
 
             <div class="form-container">
-                <form onsubmit="event.preventDefault(); alert('（デモ画面）お問い合わせを受け付けました。師範代より折り返しご連絡いたします。');">
+                <form id="contactForm" onsubmit="handleContactSubmit(event)">
                     <div class="form-group">
-                        <label>お名前 <span style="color: var(--accent-vermilion);">*</span></label>
-                        <input type="text" class="form-control" placeholder="例：山田 太郎" required>
+                        <label for="formName">お名前 <span style="color: var(--accent-vermilion);">*</span></label>
+                        <input id="formName" name="name" type="text" class="form-control" autocomplete="name" placeholder="例：山田 太郎" required>
                     </div>
                     <div class="form-group">
-                        <label>メールアドレス <span style="color: var(--accent-vermilion);">*</span></label>
-                        <input type="email" class="form-control" placeholder="example@email.com" required>
+                        <label for="formEmail">メールアドレス <span style="color: var(--accent-vermilion);">*</span></label>
+                        <input id="formEmail" name="email" type="email" class="form-control" autocomplete="email" inputmode="email" placeholder="example@email.com" required>
                     </div>
                     <div class="form-group">
-                        <label>ご用途</label>
-                        <select class="form-control" id="formUsage">
+                        <label for="formUsage">ご用途</label>
+                        <select class="form-control" id="formUsage" name="usage">
                             <option value="命名書（お祝い）">命名書（お祝い）</option>
                             <option value="インテリア書・座右の銘">インテリア書・座右の銘</option>
                             <option value="店舗・企業ロゴ">店舗・企業ロゴ</option>
@@ -1311,12 +1427,14 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>揮毫するお名前・文字 / ご要望・納期など <span style="color: var(--accent-vermilion);">*</span></label>
-                        <textarea class="form-control" rows="6" id="formDetails" placeholder="例：お子様のお名前「悠真（ゆうま）」、生年月日「2026年10月12日」、力強く温かみのある書風を希望。退院日の10月20日までに届いてほしい。" required></textarea>
+                        <label for="formDetails">揮毫するお名前・文字 / ご要望・納期など <span style="color: var(--accent-vermilion);">*</span></label>
+                        <textarea class="form-control" name="details" rows="6" id="formDetails" placeholder="例：お子様のお名前「悠真（ゆうま）」、生年月日「2026年10月12日」、力強く温かみのある書風を希望。退院日の10月20日までに届いてほしい。" required></textarea>
                     </div>
-                    <button type="submit" class="btn-gold" style="width: 100%; padding: 14px; justify-content: center; font-size: 1rem;">
-                        <i class="fa-regular fa-paper-plane"></i> 師範代へ相談内容を送信する（デモ）
+                    <button id="contactSubmit" type="submit" class="btn-gold" style="width: 100%; padding: 14px; justify-content: center; font-size: 1rem;">
+                        <i class="fa-regular fa-paper-plane"></i> お問い合わせ内容を作成する
                     </button>
+                    <p id="formStatus" class="form-status" role="status" aria-live="polite">※このサイトからの自動送信は未設定です。送信先設定前は、入力内容をコピーしてメールに貼り付ける方式です。</p>
+                    <textarea id="contactFallback" class="form-control" rows="7" readonly hidden aria-label="コピーできなかった場合のお問い合わせ内容"></textarea>
                 </form>
             </div>
         </section>
@@ -1337,109 +1455,168 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 書家 師範代 墨芸工房 (BOKUIN). All Rights Reserved.</p>
+            <p>&copy; <span id="copyrightYear">2026</span> 書家 墨芸工房. All Rights Reserved.</p>
+            <p style="margin-top: 8px;">料金・納期・素材・修正条件は、正式なご依頼前に確認してご案内します。</p>
         </div>
     </footer>
 
     <script>
-        // セクション切り替え
+        // 公開前に設定: 連絡先メールアドレス。空欄の場合は入力内容のコピーを案内します。
+        const CONTACT_EMAIL = "";
+
         function switchSection(sectionId) {
-            document.querySelectorAll('.page-section').forEach(sec => {
-                sec.classList.remove('active');
-            });
+            const target = document.getElementById(sectionId);
+            if (!target) return;
             document.querySelectorAll('.nav-item').forEach(item => {
-                item.classList.remove('active');
+                item.classList.toggle('active', item.getAttribute('href') === '#' + sectionId);
             });
-
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.classList.add('active');
-            }
-
-            const activeNav = Array.from(document.querySelectorAll('.nav-item')).find(el => el.getAttribute('onclick')?.includes(sectionId));
-            if (activeNav) {
-                activeNav.classList.add('active');
-            }
-
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (location.hash !== '#' + sectionId) history.pushState({ sectionId }, '', '#' + sectionId);
+            target.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
         }
 
-        // スマホメニュー開閉
+        function navigateToCurrentHash() {
+            const sectionId = (location.hash || '#home').slice(1);
+            const target = document.getElementById(sectionId);
+            if (target) {
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.toggle('active', item.getAttribute('href') === '#' + sectionId);
+                });
+                target.scrollIntoView({ behavior: 'auto', block: 'start' });
+            }
+        }
+        window.addEventListener('popstate', navigateToCurrentHash);
+        window.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+            if (location.hash && document.getElementById(location.hash.slice(1))) setTimeout(navigateToCurrentHash, 0);
+            const submit = document.getElementById('contactSubmit');
+            if (CONTACT_EMAIL.trim()) {
+                submit.innerHTML = '<i class="fa-regular fa-paper-plane"></i> メールアプリでお問い合わせを作成';
+                document.getElementById('formStatus').textContent = '入力内容をメールアプリの下書きに反映します。メールアプリ上で内容を確認して送信してください。';
+            }
+        });
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
+            const button = document.querySelector('.hamburger-btn');
             const icon = document.getElementById('hamburgerIcon');
-            menu.classList.toggle('open');
-            
-            if (menu.classList.contains('open')) {
-                icon.className = 'fa-solid fa-xmark';
-            } else {
-                icon.className = 'fa-solid fa-bars';
-            }
+            const open = menu.classList.toggle('open');
+            button.setAttribute('aria-expanded', String(open));
+            button.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
+            icon.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
         }
 
-        // ギャラリーフィルター
-        function filterGallery(category) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+        document.addEventListener('keydown', event => {
+            const menu = document.getElementById('mobileMenu');
+            if (event.key === 'Escape' && menu.classList.contains('open')) {
+                toggleMobileMenu();
+                document.querySelector('.hamburger-btn').focus();
+            }
+        });
 
-            const cards = document.querySelectorAll('.gallery-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+        function filterGallery(category, button) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                const active = btn === button;
+                btn.classList.toggle('active', active);
+                btn.setAttribute('aria-pressed', String(active));
+            });
+            document.querySelectorAll('.gallery-card').forEach(card => {
+                card.hidden = !(category === 'all' || card.dataset.category === category);
             });
         }
 
-        // FAQ開閉
-        function toggleFaq(element) {
-            element.classList.toggle('open');
+        function toggleFaq(button) {
+            const answerId = button.getAttribute('aria-controls');
+            const answer = document.getElementById(answerId);
+            if (!answer) return;
+            const isOpen = button.getAttribute('aria-expanded') !== 'true';
+            button.setAttribute('aria-expanded', String(isOpen));
+            button.closest('.faq-item').classList.toggle('open', isOpen);
+            answer.hidden = !isOpen;
         }
 
-        // 30秒自動診断＆連動ロジック
         let diagValues = {
             type: { price: 12000, label: '命名書（お祝い）' },
             style: { price: 0, label: '伝統的・正統派（楷書/行書）' },
             frame: { price: 3000, label: '木製高級額装（ナチュラル/ブラウン）' },
-            express: { price: 0, label: '通常発送（約5〜7日お届け）' }
+            express: { price: 0, label: '通常発送（目安5〜7日・要確認）' }
         };
 
         function selectDiag(element, category, price, label) {
             const parent = element.parentElement;
-            parent.querySelectorAll('.option-box').forEach(box => box.classList.remove('selected'));
-            element.classList.add('selected');
-
-            diagValues[category] = { price: price, label: label };
+            parent.querySelectorAll('.option-box').forEach(box => {
+                const selected = box === element;
+                box.classList.toggle('selected', selected);
+                box.setAttribute('aria-pressed', String(selected));
+            });
+            diagValues[category] = { price, label };
             updatePrice();
         }
 
         function updatePrice() {
-            const total = diagValues.type.price + diagValues.style.price + diagValues.frame.price + diagValues.express.price;
-            document.getElementById('totalPrice').innerText = '￥' + total.toLocaleString();
-
-            const deliveryEl = document.getElementById('estimatedDelivery');
-            if (diagValues.express.price > 0) {
-                deliveryEl.innerHTML = '<i class="fa-solid fa-bolt" style="color:#e2c044;"></i> 目安納期: ⚡ <strong>特急対応・ご注文後 約 3 日でお届け</strong>';
-            } else {
-                deliveryEl.innerHTML = '<i class="fa-regular fa-clock"></i> 目安納期: ご注文決定後 約 5〜7 日でお届け';
-            }
+            const total = Object.values(diagValues).reduce((sum, item) => sum + item.price, 0);
+            document.getElementById('totalPrice').textContent = '￥' + total.toLocaleString('ja-JP');
+            const delivery = document.getElementById('estimatedDelivery');
+            delivery.textContent = diagValues.express.price > 0
+                ? '納期目安：特急対応の可否・納品日は制作状況と配送条件を確認して確定します。'
+                : '納期目安：約5〜7日を想定（正式な納期は制作内容・配送条件の確認後に確定）。';
         }
 
         function applyDiagToContact() {
             switchSection('contact');
-            
-            // フォームへ選択項目を自動セット
-            const selectEl = document.getElementById('formUsage');
-            if (selectEl) {
-                selectEl.value = diagValues.type.label.includes('命名書') ? '命名書（お祝い）' :
-                                 diagValues.type.label.includes('インテリア') ? 'インテリア書・座右の銘' :
-                                 diagValues.type.label.includes('ロゴ') ? '店舗・企業ロゴ' : 'その他（贈り物等）';
+            const usage = diagValues.type.label.includes('命名書') ? '命名書（お祝い）' :
+                diagValues.type.label.includes('インテリア') ? 'インテリア書・座右の銘' :
+                diagValues.type.label.includes('ロゴ') ? '店舗・企業ロゴ' : 'その他（贈り物等）';
+            document.getElementById('formUsage').value = usage;
+            const total = document.getElementById('totalPrice').textContent;
+            document.getElementById('formDetails').value = `【概算見積りからのお問い合わせ】
+・用途：${diagValues.type.label}
+・書風：${diagValues.style.label}
+・仕上げ：${diagValues.frame.label}
+・発送：${diagValues.express.label}
+・概算金額：${total}
+※概算です。正式な料金・納期は確認後に確定します。
+------------------------------
+【制作する文字・ご要望・希望納期】
+`;
+            document.getElementById('formDetails').focus({ preventScroll: true });
+        }
+
+        async function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.currentTarget;
+            if (!form.reportValidity()) return;
+            const name = document.getElementById('formName').value.trim();
+            const email = document.getElementById('formEmail').value.trim();
+            const usage = document.getElementById('formUsage').value;
+            const details = document.getElementById('formDetails').value.trim();
+            const subject = `墨芸工房へのお問い合わせ：${usage}`;
+            const body = `お名前：${name}
+返信先メールアドレス：${email}
+ご用途：${usage}
+
+ご要望：
+${details}`;
+            const status = document.getElementById('formStatus');
+
+            if (CONTACT_EMAIL.trim()) {
+                status.textContent = 'メールアプリを開きます。宛先・本文を確認して、メールアプリ側で送信してください。サイトから直接送信されるわけではありません。';
+                window.location.href = `mailto:${CONTACT_EMAIL.trim()}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                return;
             }
 
-            const details = document.getElementById('formDetails');
-            const totalPrice = document.getElementById('totalPrice').innerText;
-            details.value = `【診断ツール経由のお問い合わせ】\n・ご用途：${diagValues.type.label}\n・書風イメージ：${diagValues.style.label}\n・額装オプション：${diagValues.frame.label}\n・発送スピード：${diagValues.express.label}\n・概算見積もり費用：${totalPrice}\n------------------------------\n【揮毫テキスト・ご要望など】\n`;
+            try {
+                await navigator.clipboard.writeText(`${subject}
+
+${body}`);
+                status.textContent = 'お問い合わせ内容をコピーしました。メールアプリに貼り付けて送信してください。サイトから自動送信はされていません。';
+            } catch (error) {
+                const fallback = document.getElementById('contactFallback');
+                fallback.value = `${subject}\n\n${body}`;
+                fallback.hidden = false;
+                fallback.focus();
+                fallback.select();
+                status.textContent = '自動コピーできませんでした。下に表示した内容をコピーし、ご自身のメールアプリからお送りください。サイトから自動送信はされていません。';
+            }
         }
     </script>
 </body>
